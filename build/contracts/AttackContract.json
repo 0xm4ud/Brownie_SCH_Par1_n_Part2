@@ -1,0 +1,455 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "beforeExecution",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "7": "contracts/AttackContract.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/AttackContract.sol",
+    "exportedSymbols": {
+      "AttackContract": [
+        7
+      ],
+      "ICallbackContract": [
+        2356
+      ]
+    },
+    "id": 8,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".13"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "116:24:7"
+      },
+      {
+        "absolutePath": "interfaces/ICallbackContract.sol",
+        "file": "../interfaces/ICallbackContract.sol",
+        "id": 2,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 8,
+        "sourceUnit": 2357,
+        "src": "142:45:7",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "AttackContract",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 7,
+        "linearizedBaseContracts": [
+          7
+        ],
+        "name": "AttackContract",
+        "nameLocation": "198:14:7",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 5,
+              "nodeType": "Block",
+              "src": "255:74:7",
+              "statements": []
+            },
+            "functionSelector": "6e785635",
+            "id": 6,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "beforeExecution",
+            "nameLocation": "228:15:7",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "243:2:7"
+            },
+            "returnParameters": {
+              "id": 4,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "255:0:7"
+            },
+            "scope": 7,
+            "src": "219:110:7",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 8,
+        "src": "189:142:7",
+        "usedErrors": []
+      }
+    ],
+    "src": "116:216:7"
+  },
+  "bytecode": "6080604052348015600f57600080fd5b50606580601d6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c80636e78563514602d575b600080fd5b00fea2646970667358221220e4d88fe7617d51683ce2414ac636ecf4991312b535d53f1aaf40c275d059b31b64736f6c63430008130033",
+  "bytecodeSha1": "292e67e7070264b78491d30de712d29ef6176f31",
+  "compiler": {
+    "evm_version": "istanbul",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.8.19+commit.7dd6d404"
+  },
+  "contractName": "AttackContract",
+  "coverageMap": {
+    "branches": {
+      "7": {}
+    },
+    "statements": {
+      "7": {}
+    }
+  },
+  "dependencies": [],
+  "deployedBytecode": "6080604052348015600f57600080fd5b506004361060285760003560e01c80636e78563514602d575b600080fd5b00fea2646970667358221220e4d88fe7617d51683ce2414ac636ecf4991312b535d53f1aaf40c275d059b31b64736f6c63430008130033",
+  "deployedSourceMap": "189:142:7:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;219:110;",
+  "language": "Solidity",
+  "natspec": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "offset": [
+    189,
+    331
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x4 CALLDATASIZE LT PUSH1 0x28 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x6E785635 EQ PUSH1 0x2D JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST STOP INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xE4 0xD8 DUP16 0xE7 PUSH2 0x7D51 PUSH9 0x3CE2414AC636ECF499 SGT SLT 0xB5 CALLDATALOAD 0xD5 EXTCODEHASH BYTE 0xAF BLOCKHASH 0xC2 PUSH22 0xD059B31B64736F6C6343000813003300000000000000 ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        189,
+        331
+      ],
+      "op": "PUSH1",
+      "path": "7",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        189,
+        331
+      ],
+      "op": "PUSH1",
+      "path": "7",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        189,
+        331
+      ],
+      "op": "MSTORE",
+      "path": "7"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        189,
+        331
+      ],
+      "op": "CALLVALUE",
+      "path": "7"
+    },
+    "6": {
+      "fn": null,
+      "offset": [
+        189,
+        331
+      ],
+      "op": "DUP1",
+      "path": "7"
+    },
+    "7": {
+      "fn": null,
+      "offset": [
+        189,
+        331
+      ],
+      "op": "ISZERO",
+      "path": "7"
+    },
+    "8": {
+      "fn": null,
+      "offset": [
+        189,
+        331
+      ],
+      "op": "PUSH1",
+      "path": "7",
+      "value": "0xF"
+    },
+    "10": {
+      "fn": null,
+      "offset": [
+        189,
+        331
+      ],
+      "op": "JUMPI",
+      "path": "7"
+    },
+    "11": {
+      "fn": null,
+      "offset": [
+        189,
+        331
+      ],
+      "op": "PUSH1",
+      "path": "7",
+      "value": "0x0"
+    },
+    "13": {
+      "fn": null,
+      "offset": [
+        189,
+        331
+      ],
+      "op": "DUP1",
+      "path": "7"
+    },
+    "14": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": null,
+      "offset": [
+        189,
+        331
+      ],
+      "op": "REVERT",
+      "path": "7"
+    },
+    "15": {
+      "fn": null,
+      "offset": [
+        189,
+        331
+      ],
+      "op": "JUMPDEST",
+      "path": "7"
+    },
+    "16": {
+      "fn": null,
+      "offset": [
+        189,
+        331
+      ],
+      "op": "POP",
+      "path": "7"
+    },
+    "17": {
+      "fn": null,
+      "offset": [
+        189,
+        331
+      ],
+      "op": "PUSH1",
+      "path": "7",
+      "value": "0x4"
+    },
+    "19": {
+      "fn": null,
+      "offset": [
+        189,
+        331
+      ],
+      "op": "CALLDATASIZE",
+      "path": "7"
+    },
+    "20": {
+      "fn": null,
+      "offset": [
+        189,
+        331
+      ],
+      "op": "LT",
+      "path": "7"
+    },
+    "21": {
+      "fn": null,
+      "offset": [
+        189,
+        331
+      ],
+      "op": "PUSH1",
+      "path": "7",
+      "value": "0x28"
+    },
+    "23": {
+      "fn": null,
+      "offset": [
+        189,
+        331
+      ],
+      "op": "JUMPI",
+      "path": "7"
+    },
+    "24": {
+      "fn": null,
+      "offset": [
+        189,
+        331
+      ],
+      "op": "PUSH1",
+      "path": "7",
+      "value": "0x0"
+    },
+    "26": {
+      "fn": null,
+      "offset": [
+        189,
+        331
+      ],
+      "op": "CALLDATALOAD",
+      "path": "7"
+    },
+    "27": {
+      "fn": null,
+      "offset": [
+        189,
+        331
+      ],
+      "op": "PUSH1",
+      "path": "7",
+      "value": "0xE0"
+    },
+    "29": {
+      "fn": null,
+      "offset": [
+        189,
+        331
+      ],
+      "op": "SHR",
+      "path": "7"
+    },
+    "30": {
+      "fn": null,
+      "offset": [
+        189,
+        331
+      ],
+      "op": "DUP1",
+      "path": "7"
+    },
+    "31": {
+      "fn": null,
+      "offset": [
+        189,
+        331
+      ],
+      "op": "PUSH4",
+      "path": "7",
+      "value": "0x6E785635"
+    },
+    "36": {
+      "fn": null,
+      "offset": [
+        189,
+        331
+      ],
+      "op": "EQ",
+      "path": "7"
+    },
+    "37": {
+      "fn": null,
+      "offset": [
+        189,
+        331
+      ],
+      "op": "PUSH1",
+      "path": "7",
+      "value": "0x2D"
+    },
+    "39": {
+      "fn": null,
+      "offset": [
+        189,
+        331
+      ],
+      "op": "JUMPI",
+      "path": "7"
+    },
+    "40": {
+      "fn": null,
+      "offset": [
+        189,
+        331
+      ],
+      "op": "JUMPDEST",
+      "path": "7"
+    },
+    "41": {
+      "fn": null,
+      "offset": [
+        189,
+        331
+      ],
+      "op": "PUSH1",
+      "path": "7",
+      "value": "0x0"
+    },
+    "43": {
+      "fn": null,
+      "offset": [
+        189,
+        331
+      ],
+      "op": "DUP1",
+      "path": "7"
+    },
+    "44": {
+      "first_revert": true,
+      "fn": null,
+      "offset": [
+        189,
+        331
+      ],
+      "op": "REVERT",
+      "path": "7"
+    },
+    "45": {
+      "fn": "AttackContract.beforeExecution",
+      "offset": [
+        219,
+        329
+      ],
+      "op": "JUMPDEST",
+      "path": "7"
+    },
+    "46": {
+      "fn": "AttackContract.beforeExecution",
+      "offset": [
+        219,
+        329
+      ],
+      "op": "STOP",
+      "path": "7"
+    }
+  },
+  "sha1": "0a5c03e5bc0a5d630a995d723031d48465e36465",
+  "source": "// SCH Course Copyright Policy (C): DO-NOT-SHARE-WITH-ANYONE\n// https://smartcontractshacking.com/#copyright-policy\npragma solidity ^0.8.13;\n\nimport \"../interfaces/ICallbackContract.sol\";\n\ncontract AttackContract {\n    function beforeExecution() external {\n        // TODO: Implement your malicious beforeExecution callback\n    }\n}\n",
+  "sourceMap": "189:142:7:-:0;;;;;;;;;;;;;;;;;;;",
+  "sourcePath": "contracts/AttackContract.sol",
+  "type": "contract"
+}

@@ -1,0 +1,419 @@
+{
+  "abi": [
+    {
+      "stateMutability": "nonpayable",
+      "type": "fallback"
+    }
+  ],
+  "allSourcePaths": {
+    "19": "contracts/call-attacks-4/solution/BlockSafeDestructor.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/call-attacks-4/solution/BlockSafeDestructor.sol",
+    "exportedSymbols": {
+      "BlockSafeDestructor": [
+        535
+      ]
+    },
+    "id": 536,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 520,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:19"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "BlockSafeDestructor",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 535,
+        "linearizedBaseContracts": [
+          535
+        ],
+        "name": "BlockSafeDestructor",
+        "nameLocation": "34:19:19",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 533,
+              "nodeType": "Block",
+              "src": "79:50:19",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "arguments": [
+                              {
+                                "hexValue": "30",
+                                "id": 528,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": true,
+                                "kind": "number",
+                                "lValueRequested": false,
+                                "nodeType": "Literal",
+                                "src": "118:1:19",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_rational_0_by_1",
+                                  "typeString": "int_const 0"
+                                },
+                                "value": "0"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_rational_0_by_1",
+                                  "typeString": "int_const 0"
+                                }
+                              ],
+                              "id": 527,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "nodeType": "ElementaryTypeNameExpression",
+                              "src": "110:7:19",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_address_$",
+                                "typeString": "type(address)"
+                              },
+                              "typeName": {
+                                "id": 526,
+                                "name": "address",
+                                "nodeType": "ElementaryTypeName",
+                                "src": "110:7:19",
+                                "typeDescriptions": {}
+                              }
+                            },
+                            "id": 529,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "typeConversion",
+                            "lValueRequested": false,
+                            "nameLocations": [],
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "110:10:19",
+                            "tryCall": false,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "id": 525,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "102:8:19",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_address_payable_$",
+                            "typeString": "type(address payable)"
+                          },
+                          "typeName": {
+                            "id": 524,
+                            "name": "address",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "102:8:19",
+                            "stateMutability": "payable",
+                            "typeDescriptions": {}
+                          }
+                        },
+                        "id": 530,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "102:19:19",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      ],
+                      "id": 523,
+                      "name": "selfdestruct",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": -21,
+                      "src": "89:12:19",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_selfdestruct_nonpayable$_t_address_payable_$returns$__$",
+                        "typeString": "function (address payable)"
+                      }
+                    },
+                    "id": 531,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "89:33:19",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 532,
+                  "nodeType": "ExpressionStatement",
+                  "src": "89:33:19"
+                }
+              ]
+            },
+            "id": 534,
+            "implemented": true,
+            "kind": "fallback",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 521,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "67:2:19"
+            },
+            "returnParameters": {
+              "id": 522,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "79:0:19"
+            },
+            "scope": 535,
+            "src": "59:70:19",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 536,
+        "src": "25:106:19",
+        "usedErrors": []
+      }
+    ],
+    "src": "0:132:19"
+  },
+  "bytecode": "6080604052348015600f57600080fd5b50604a80601d6000396000f3fe6080604052348015600f57600080fd5b506000fffea264697066735822122075108cc422a72a1a24cb8f7a866f2a8957baf574fa7e8ab865d62948748b986b64736f6c63430008130033",
+  "bytecodeSha1": "86d823aa634361d2c2e57c45f6db5eaed7117ad9",
+  "compiler": {
+    "evm_version": "istanbul",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.8.19+commit.7dd6d404"
+  },
+  "contractName": "BlockSafeDestructor",
+  "coverageMap": {
+    "branches": {
+      "19": {}
+    },
+    "statements": {
+      "19": {
+        "BlockSafeDestructor.<fallback>": {
+          "0": [
+            89,
+            122
+          ]
+        }
+      }
+    }
+  },
+  "dependencies": [],
+  "deployedBytecode": "6080604052348015600f57600080fd5b506000fffea264697066735822122075108cc422a72a1a24cb8f7a866f2a8957baf574fa7e8ab865d62948748b986b64736f6c63430008130033",
+  "deployedSourceMap": "25:106:19:-:0;;;;;;;;;;;;-1:-1:-1;118:1:19;89:33",
+  "language": "Solidity",
+  "natspec": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "offset": [
+    25,
+    131
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x0 SELFDESTRUCT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 PUSH22 0x108CC422A72A1A24CB8F7A866F2A8957BAF574FA7E8A 0xB8 PUSH6 0xD62948748B98 PUSH12 0x64736F6C6343000813003300 ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        25,
+        131
+      ],
+      "op": "PUSH1",
+      "path": "19",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        25,
+        131
+      ],
+      "op": "PUSH1",
+      "path": "19",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        25,
+        131
+      ],
+      "op": "MSTORE",
+      "path": "19"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        25,
+        131
+      ],
+      "op": "CALLVALUE",
+      "path": "19"
+    },
+    "6": {
+      "fn": null,
+      "offset": [
+        25,
+        131
+      ],
+      "op": "DUP1",
+      "path": "19"
+    },
+    "7": {
+      "fn": null,
+      "offset": [
+        25,
+        131
+      ],
+      "op": "ISZERO",
+      "path": "19"
+    },
+    "8": {
+      "fn": null,
+      "offset": [
+        25,
+        131
+      ],
+      "op": "PUSH1",
+      "path": "19",
+      "value": "0xF"
+    },
+    "10": {
+      "fn": null,
+      "offset": [
+        25,
+        131
+      ],
+      "op": "JUMPI",
+      "path": "19"
+    },
+    "11": {
+      "fn": null,
+      "offset": [
+        25,
+        131
+      ],
+      "op": "PUSH1",
+      "path": "19",
+      "value": "0x0"
+    },
+    "13": {
+      "fn": null,
+      "offset": [
+        25,
+        131
+      ],
+      "op": "DUP1",
+      "path": "19"
+    },
+    "14": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": null,
+      "offset": [
+        25,
+        131
+      ],
+      "op": "REVERT",
+      "path": "19"
+    },
+    "15": {
+      "fn": null,
+      "offset": [
+        25,
+        131
+      ],
+      "op": "JUMPDEST",
+      "path": "19"
+    },
+    "16": {
+      "op": "POP"
+    },
+    "17": {
+      "fn": "BlockSafeDestructor.<fallback>",
+      "offset": [
+        118,
+        119
+      ],
+      "op": "PUSH1",
+      "path": "19",
+      "statement": 0,
+      "value": "0x0"
+    },
+    "19": {
+      "fn": "BlockSafeDestructor.<fallback>",
+      "offset": [
+        89,
+        122
+      ],
+      "op": "SELFDESTRUCT",
+      "path": "19"
+    }
+  },
+  "sha1": "843d2ce6d40e1aff077ed58c987ea47d3c47ca80",
+  "source": "pragma solidity ^0.8.0;\n\ncontract BlockSafeDestructor{\n    fallback() external {\n        selfdestruct(payable(address(0)));\n    }\n}\n",
+  "sourceMap": "25:106:19:-:0;;;;;;;;;;;;;;;;;;;",
+  "sourcePath": "contracts/call-attacks-4/solution/BlockSafeDestructor.sol",
+  "type": "contract"
+}

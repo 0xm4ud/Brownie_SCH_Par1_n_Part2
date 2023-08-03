@@ -1,0 +1,1624 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_poolAddress",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "flashLoan",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getETH",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "12": "contracts/flash-loans-1/GreedyReceiver.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/flash-loans-1/GreedyReceiver.sol",
+    "exportedSymbols": {
+      "GreedyReceiver": [
+        1199
+      ],
+      "IPool": [
+        1166
+      ]
+    },
+    "id": 1200,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1160,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".13"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "116:24:12"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IPool",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 1166,
+        "linearizedBaseContracts": [
+          1166
+        ],
+        "name": "IPool",
+        "nameLocation": "152:5:12",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "9ab603b9",
+            "id": 1165,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "flashLoan",
+            "nameLocation": "173:9:12",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1163,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1162,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "191:6:12",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1165,
+                  "src": "183:14:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1161,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "183:7:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "182:16:12"
+            },
+            "returnParameters": {
+              "id": 1164,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "207:0:12"
+            },
+            "scope": 1166,
+            "src": "164:44:12",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1200,
+        "src": "142:68:12",
+        "usedErrors": []
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "GreedyReceiver",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 1167,
+          "nodeType": "StructuredDocumentation",
+          "src": "212:90:12",
+          "text": " @title GreedyReceiver\n @author JohnnyTime (https://smartcontractshacking.com)"
+        },
+        "fullyImplemented": true,
+        "id": 1199,
+        "linearizedBaseContracts": [
+          1199
+        ],
+        "name": "GreedyReceiver",
+        "nameLocation": "312:14:12",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 1170,
+            "mutability": "mutable",
+            "name": "pool",
+            "nameLocation": "412:4:12",
+            "nodeType": "VariableDeclaration",
+            "scope": 1199,
+            "src": "406:10:12",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_IPool_$1166",
+              "typeString": "contract IPool"
+            },
+            "typeName": {
+              "id": 1169,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 1168,
+                "name": "IPool",
+                "nameLocations": [
+                  "406:5:12"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 1166,
+                "src": "406:5:12"
+              },
+              "referencedDeclaration": 1166,
+              "src": "406:5:12",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IPool_$1166",
+                "typeString": "contract IPool"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1181,
+              "nodeType": "Block",
+              "src": "457:43:12",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 1179,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 1175,
+                      "name": "pool",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1170,
+                      "src": "467:4:12",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IPool_$1166",
+                        "typeString": "contract IPool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "id": 1177,
+                          "name": "_poolAddress",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1172,
+                          "src": "480:12:12",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 1176,
+                        "name": "IPool",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1166,
+                        "src": "474:5:12",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_IPool_$1166_$",
+                          "typeString": "type(contract IPool)"
+                        }
+                      },
+                      "id": 1178,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "nameLocations": [],
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "474:19:12",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IPool_$1166",
+                        "typeString": "contract IPool"
+                      }
+                    },
+                    "src": "467:26:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IPool_$1166",
+                      "typeString": "contract IPool"
+                    }
+                  },
+                  "id": 1180,
+                  "nodeType": "ExpressionStatement",
+                  "src": "467:26:12"
+                }
+              ]
+            },
+            "id": 1182,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1173,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1172,
+                  "mutability": "mutable",
+                  "name": "_poolAddress",
+                  "nameLocation": "443:12:12",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1182,
+                  "src": "435:20:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1171,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "435:7:12",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "434:22:12"
+            },
+            "returnParameters": {
+              "id": 1174,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "457:0:12"
+            },
+            "scope": 1199,
+            "src": "423:77:12",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1193,
+              "nodeType": "Block",
+              "src": "586:39:12",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 1190,
+                        "name": "amount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1184,
+                        "src": "611:6:12",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "id": 1187,
+                        "name": "pool",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1170,
+                        "src": "596:4:12",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IPool_$1166",
+                          "typeString": "contract IPool"
+                        }
+                      },
+                      "id": 1189,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "601:9:12",
+                      "memberName": "flashLoan",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1165,
+                      "src": "596:14:12",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256) external"
+                      }
+                    },
+                    "id": 1191,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "596:22:12",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1192,
+                  "nodeType": "ExpressionStatement",
+                  "src": "596:22:12"
+                }
+              ]
+            },
+            "functionSelector": "9ab603b9",
+            "id": 1194,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "flashLoan",
+            "nameLocation": "551:9:12",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1185,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1184,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "569:6:12",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1194,
+                  "src": "561:14:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1183,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "561:7:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "560:16:12"
+            },
+            "returnParameters": {
+              "id": 1186,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "586:0:12"
+            },
+            "scope": 1199,
+            "src": "542:83:12",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 1197,
+              "nodeType": "Block",
+              "src": "702:2:12",
+              "statements": []
+            },
+            "functionSelector": "14f6c3be",
+            "id": 1198,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getETH",
+            "nameLocation": "676:6:12",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1195,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "682:2:12"
+            },
+            "returnParameters": {
+              "id": 1196,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "702:0:12"
+            },
+            "scope": 1199,
+            "src": "667:37:12",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1200,
+        "src": "303:403:12",
+        "usedErrors": []
+      }
+    ],
+    "src": "116:590:12"
+  },
+  "bytecode": "608060405234801561001057600080fd5b5060405161018338038061018383398101604081905261002f91610054565b600080546001600160a01b0319166001600160a01b0392909216919091179055610084565b60006020828403121561006657600080fd5b81516001600160a01b038116811461007d57600080fd5b9392505050565b60f1806100926000396000f3fe60806040526004361060265760003560e01c806314f6c3be14602b5780639ab603b914602d575b600080fd5b005b348015603857600080fd5b50602b604436600460a3565b600054604051639ab603b960e01b8152600481018390526001600160a01b0390911690639ab603b990602401600060405180830381600087803b158015608957600080fd5b505af1158015609c573d6000803e3d6000fd5b5050505050565b60006020828403121560b457600080fd5b503591905056fea2646970667358221220d26fa7ddd3f0d1da049bc3300f1a6a182591a298b9769971d1b3902fad1ae7a064736f6c63430008130033",
+  "bytecodeSha1": "1294f5f07a9ed053b10b204683617ef93d55a1d6",
+  "compiler": {
+    "evm_version": "istanbul",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.8.19+commit.7dd6d404"
+  },
+  "contractName": "GreedyReceiver",
+  "coverageMap": {
+    "branches": {
+      "12": {}
+    },
+    "statements": {
+      "12": {
+        "GreedyReceiver.flashLoan": {
+          "0": [
+            596,
+            618
+          ]
+        }
+      }
+    }
+  },
+  "dependencies": [
+    "IPool"
+  ],
+  "deployedBytecode": "60806040526004361060265760003560e01c806314f6c3be14602b5780639ab603b914602d575b600080fd5b005b348015603857600080fd5b50602b604436600460a3565b600054604051639ab603b960e01b8152600481018390526001600160a01b0390911690639ab603b990602401600060405180830381600087803b158015608957600080fd5b505af1158015609c573d6000803e3d6000fd5b5050505050565b60006020828403121560b457600080fd5b503591905056fea2646970667358221220d26fa7ddd3f0d1da049bc3300f1a6a182591a298b9769971d1b3902fad1ae7a064736f6c63430008130033",
+  "deployedSourceMap": "303:403:12:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;667:37;;542:83;;;;;;;;;;-1:-1:-1;542:83:12;;;;;:::i;:::-;596:4;;:22;;-1:-1:-1;;;596:22:12;;;;;345:25:20;;;-1:-1:-1;;;;;596:4:12;;;;:14;;318:18:20;;596:22:12;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;542:83;:::o;14:180:20:-;73:6;126:2;114:9;105:7;101:23;97:32;94:52;;;142:1;139;132:12;94:52;-1:-1:-1;165:23:20;;14:180;-1:-1:-1;14:180:20:o",
+  "language": "Solidity",
+  "natspec": {
+    "author": "JohnnyTime (https://smartcontractshacking.com)",
+    "kind": "dev",
+    "methods": {},
+    "title": "GreedyReceiver",
+    "version": 1
+  },
+  "offset": [
+    303,
+    706
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x4 CALLDATASIZE LT PUSH1 0x26 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x14F6C3BE EQ PUSH1 0x2B JUMPI DUP1 PUSH4 0x9AB603B9 EQ PUSH1 0x2D JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST STOP JUMPDEST CALLVALUE DUP1 ISZERO PUSH1 0x38 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x2B PUSH1 0x44 CALLDATASIZE PUSH1 0x4 PUSH1 0xA3 JUMP JUMPDEST PUSH1 0x0 SLOAD PUSH1 0x40 MLOAD PUSH4 0x9AB603B9 PUSH1 0xE0 SHL DUP2 MSTORE PUSH1 0x4 DUP2 ADD DUP4 SWAP1 MSTORE PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB SWAP1 SWAP2 AND SWAP1 PUSH4 0x9AB603B9 SWAP1 PUSH1 0x24 ADD PUSH1 0x0 PUSH1 0x40 MLOAD DUP1 DUP4 SUB DUP2 PUSH1 0x0 DUP8 DUP1 EXTCODESIZE ISZERO DUP1 ISZERO PUSH1 0x89 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP GAS CALL ISZERO DUP1 ISZERO PUSH1 0x9C JUMPI RETURNDATASIZE PUSH1 0x0 DUP1 RETURNDATACOPY RETURNDATASIZE PUSH1 0x0 REVERT JUMPDEST POP POP POP POP POP JUMP JUMPDEST PUSH1 0x0 PUSH1 0x20 DUP3 DUP5 SUB SLT ISZERO PUSH1 0xB4 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP CALLDATALOAD SWAP2 SWAP1 POP JUMP INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xD2 PUSH16 0xA7DDD3F0D1DA049BC3300F1A6A182591 LOG2 SWAP9 0xB9 PUSH23 0x9971D1B3902FAD1AE7A064736F6C634300081300330000 ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        303,
+        706
+      ],
+      "op": "PUSH1",
+      "path": "12",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        303,
+        706
+      ],
+      "op": "PUSH1",
+      "path": "12",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        303,
+        706
+      ],
+      "op": "MSTORE",
+      "path": "12"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        303,
+        706
+      ],
+      "op": "PUSH1",
+      "path": "12",
+      "value": "0x4"
+    },
+    "7": {
+      "fn": null,
+      "offset": [
+        303,
+        706
+      ],
+      "op": "CALLDATASIZE",
+      "path": "12"
+    },
+    "8": {
+      "fn": null,
+      "offset": [
+        303,
+        706
+      ],
+      "op": "LT",
+      "path": "12"
+    },
+    "9": {
+      "fn": null,
+      "offset": [
+        303,
+        706
+      ],
+      "op": "PUSH1",
+      "path": "12",
+      "value": "0x26"
+    },
+    "11": {
+      "fn": null,
+      "offset": [
+        303,
+        706
+      ],
+      "op": "JUMPI",
+      "path": "12"
+    },
+    "12": {
+      "fn": null,
+      "offset": [
+        303,
+        706
+      ],
+      "op": "PUSH1",
+      "path": "12",
+      "value": "0x0"
+    },
+    "14": {
+      "fn": null,
+      "offset": [
+        303,
+        706
+      ],
+      "op": "CALLDATALOAD",
+      "path": "12"
+    },
+    "15": {
+      "fn": null,
+      "offset": [
+        303,
+        706
+      ],
+      "op": "PUSH1",
+      "path": "12",
+      "value": "0xE0"
+    },
+    "17": {
+      "fn": null,
+      "offset": [
+        303,
+        706
+      ],
+      "op": "SHR",
+      "path": "12"
+    },
+    "18": {
+      "fn": null,
+      "offset": [
+        303,
+        706
+      ],
+      "op": "DUP1",
+      "path": "12"
+    },
+    "19": {
+      "fn": null,
+      "offset": [
+        303,
+        706
+      ],
+      "op": "PUSH4",
+      "path": "12",
+      "value": "0x14F6C3BE"
+    },
+    "24": {
+      "fn": null,
+      "offset": [
+        303,
+        706
+      ],
+      "op": "EQ",
+      "path": "12"
+    },
+    "25": {
+      "fn": null,
+      "offset": [
+        303,
+        706
+      ],
+      "op": "PUSH1",
+      "path": "12",
+      "value": "0x2B"
+    },
+    "27": {
+      "fn": null,
+      "offset": [
+        303,
+        706
+      ],
+      "op": "JUMPI",
+      "path": "12"
+    },
+    "28": {
+      "fn": null,
+      "offset": [
+        303,
+        706
+      ],
+      "op": "DUP1",
+      "path": "12"
+    },
+    "29": {
+      "fn": null,
+      "offset": [
+        303,
+        706
+      ],
+      "op": "PUSH4",
+      "path": "12",
+      "value": "0x9AB603B9"
+    },
+    "34": {
+      "fn": null,
+      "offset": [
+        303,
+        706
+      ],
+      "op": "EQ",
+      "path": "12"
+    },
+    "35": {
+      "fn": null,
+      "offset": [
+        303,
+        706
+      ],
+      "op": "PUSH1",
+      "path": "12",
+      "value": "0x2D"
+    },
+    "37": {
+      "fn": null,
+      "offset": [
+        303,
+        706
+      ],
+      "op": "JUMPI",
+      "path": "12"
+    },
+    "38": {
+      "fn": null,
+      "offset": [
+        303,
+        706
+      ],
+      "op": "JUMPDEST",
+      "path": "12"
+    },
+    "39": {
+      "fn": null,
+      "offset": [
+        303,
+        706
+      ],
+      "op": "PUSH1",
+      "path": "12",
+      "value": "0x0"
+    },
+    "41": {
+      "fn": null,
+      "offset": [
+        303,
+        706
+      ],
+      "op": "DUP1",
+      "path": "12"
+    },
+    "42": {
+      "first_revert": true,
+      "fn": null,
+      "offset": [
+        303,
+        706
+      ],
+      "op": "REVERT",
+      "path": "12"
+    },
+    "43": {
+      "fn": "GreedyReceiver.getETH",
+      "offset": [
+        667,
+        704
+      ],
+      "op": "JUMPDEST",
+      "path": "12"
+    },
+    "44": {
+      "fn": "GreedyReceiver.getETH",
+      "offset": [
+        667,
+        704
+      ],
+      "op": "STOP",
+      "path": "12"
+    },
+    "45": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        542,
+        625
+      ],
+      "op": "JUMPDEST",
+      "path": "12"
+    },
+    "46": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        542,
+        625
+      ],
+      "op": "CALLVALUE",
+      "path": "12"
+    },
+    "47": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        542,
+        625
+      ],
+      "op": "DUP1",
+      "path": "12"
+    },
+    "48": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        542,
+        625
+      ],
+      "op": "ISZERO",
+      "path": "12"
+    },
+    "49": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        542,
+        625
+      ],
+      "op": "PUSH1",
+      "path": "12",
+      "value": "0x38"
+    },
+    "51": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        542,
+        625
+      ],
+      "op": "JUMPI",
+      "path": "12"
+    },
+    "52": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        542,
+        625
+      ],
+      "op": "PUSH1",
+      "path": "12",
+      "value": "0x0"
+    },
+    "54": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        542,
+        625
+      ],
+      "op": "DUP1",
+      "path": "12"
+    },
+    "55": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        542,
+        625
+      ],
+      "op": "REVERT",
+      "path": "12"
+    },
+    "56": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        542,
+        625
+      ],
+      "op": "JUMPDEST",
+      "path": "12"
+    },
+    "57": {
+      "op": "POP"
+    },
+    "58": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        542,
+        625
+      ],
+      "op": "PUSH1",
+      "path": "12",
+      "value": "0x2B"
+    },
+    "60": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        542,
+        625
+      ],
+      "op": "PUSH1",
+      "path": "12",
+      "value": "0x44"
+    },
+    "62": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        542,
+        625
+      ],
+      "op": "CALLDATASIZE",
+      "path": "12"
+    },
+    "63": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        542,
+        625
+      ],
+      "op": "PUSH1",
+      "path": "12",
+      "value": "0x4"
+    },
+    "65": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        542,
+        625
+      ],
+      "op": "PUSH1",
+      "path": "12",
+      "value": "0xA3"
+    },
+    "67": {
+      "fn": "GreedyReceiver.flashLoan",
+      "jump": "i",
+      "offset": [
+        542,
+        625
+      ],
+      "op": "JUMP",
+      "path": "12"
+    },
+    "68": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        542,
+        625
+      ],
+      "op": "JUMPDEST",
+      "path": "12"
+    },
+    "69": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        600
+      ],
+      "op": "PUSH1",
+      "path": "12",
+      "statement": 0,
+      "value": "0x0"
+    },
+    "71": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        600
+      ],
+      "op": "SLOAD",
+      "path": "12"
+    },
+    "72": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "PUSH1",
+      "path": "12",
+      "value": "0x40"
+    },
+    "74": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "MLOAD",
+      "path": "12"
+    },
+    "75": {
+      "op": "PUSH4",
+      "value": "0x9AB603B9"
+    },
+    "80": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "82": {
+      "op": "SHL"
+    },
+    "83": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "DUP2",
+      "path": "12"
+    },
+    "84": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "MSTORE",
+      "path": "12"
+    },
+    "85": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "PUSH1",
+      "path": "12",
+      "value": "0x4"
+    },
+    "87": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "DUP2",
+      "path": "12"
+    },
+    "88": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "ADD",
+      "path": "12"
+    },
+    "89": {
+      "op": "DUP4"
+    },
+    "90": {
+      "op": "SWAP1"
+    },
+    "91": {
+      "op": "MSTORE"
+    },
+    "92": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "94": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "96": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "98": {
+      "op": "SHL"
+    },
+    "99": {
+      "op": "SUB"
+    },
+    "100": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        600
+      ],
+      "op": "SWAP1",
+      "path": "12"
+    },
+    "101": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        600
+      ],
+      "op": "SWAP2",
+      "path": "12"
+    },
+    "102": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        600
+      ],
+      "op": "AND",
+      "path": "12"
+    },
+    "103": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        600
+      ],
+      "op": "SWAP1",
+      "path": "12"
+    },
+    "104": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        610
+      ],
+      "op": "PUSH4",
+      "path": "12",
+      "value": "0x9AB603B9"
+    },
+    "109": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        610
+      ],
+      "op": "SWAP1",
+      "path": "12"
+    },
+    "110": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "112": {
+      "op": "ADD"
+    },
+    "113": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "PUSH1",
+      "path": "12",
+      "value": "0x0"
+    },
+    "115": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "PUSH1",
+      "path": "12",
+      "value": "0x40"
+    },
+    "117": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "MLOAD",
+      "path": "12"
+    },
+    "118": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "DUP1",
+      "path": "12"
+    },
+    "119": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "DUP4",
+      "path": "12"
+    },
+    "120": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "SUB",
+      "path": "12"
+    },
+    "121": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "DUP2",
+      "path": "12"
+    },
+    "122": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "PUSH1",
+      "path": "12",
+      "value": "0x0"
+    },
+    "124": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "DUP8",
+      "path": "12"
+    },
+    "125": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "DUP1",
+      "path": "12"
+    },
+    "126": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "EXTCODESIZE",
+      "path": "12"
+    },
+    "127": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "ISZERO",
+      "path": "12"
+    },
+    "128": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "DUP1",
+      "path": "12"
+    },
+    "129": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "ISZERO",
+      "path": "12"
+    },
+    "130": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "PUSH1",
+      "path": "12",
+      "value": "0x89"
+    },
+    "132": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "JUMPI",
+      "path": "12"
+    },
+    "133": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "PUSH1",
+      "path": "12",
+      "value": "0x0"
+    },
+    "135": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "DUP1",
+      "path": "12"
+    },
+    "136": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "REVERT",
+      "path": "12"
+    },
+    "137": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "JUMPDEST",
+      "path": "12"
+    },
+    "138": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "POP",
+      "path": "12"
+    },
+    "139": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "GAS",
+      "path": "12"
+    },
+    "140": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "CALL",
+      "path": "12"
+    },
+    "141": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "ISZERO",
+      "path": "12"
+    },
+    "142": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "DUP1",
+      "path": "12"
+    },
+    "143": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "ISZERO",
+      "path": "12"
+    },
+    "144": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "PUSH1",
+      "path": "12",
+      "value": "0x9C"
+    },
+    "146": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "JUMPI",
+      "path": "12"
+    },
+    "147": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "12"
+    },
+    "148": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "PUSH1",
+      "path": "12",
+      "value": "0x0"
+    },
+    "150": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "DUP1",
+      "path": "12"
+    },
+    "151": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "RETURNDATACOPY",
+      "path": "12"
+    },
+    "152": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "12"
+    },
+    "153": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "PUSH1",
+      "path": "12",
+      "value": "0x0"
+    },
+    "155": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "REVERT",
+      "path": "12"
+    },
+    "156": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "JUMPDEST",
+      "path": "12"
+    },
+    "157": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "POP",
+      "path": "12"
+    },
+    "158": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "POP",
+      "path": "12"
+    },
+    "159": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "POP",
+      "path": "12"
+    },
+    "160": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        596,
+        618
+      ],
+      "op": "POP",
+      "path": "12"
+    },
+    "161": {
+      "fn": "GreedyReceiver.flashLoan",
+      "offset": [
+        542,
+        625
+      ],
+      "op": "POP",
+      "path": "12"
+    },
+    "162": {
+      "fn": "GreedyReceiver.flashLoan",
+      "jump": "o",
+      "offset": [
+        542,
+        625
+      ],
+      "op": "JUMP",
+      "path": "12"
+    },
+    "163": {
+      "op": "JUMPDEST"
+    },
+    "164": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "166": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "168": {
+      "op": "DUP3"
+    },
+    "169": {
+      "op": "DUP5"
+    },
+    "170": {
+      "op": "SUB"
+    },
+    "171": {
+      "op": "SLT"
+    },
+    "172": {
+      "op": "ISZERO"
+    },
+    "173": {
+      "op": "PUSH1",
+      "value": "0xB4"
+    },
+    "175": {
+      "op": "JUMPI"
+    },
+    "176": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "178": {
+      "op": "DUP1"
+    },
+    "179": {
+      "op": "REVERT"
+    },
+    "180": {
+      "op": "JUMPDEST"
+    },
+    "181": {
+      "op": "POP"
+    },
+    "182": {
+      "op": "CALLDATALOAD"
+    },
+    "183": {
+      "op": "SWAP2"
+    },
+    "184": {
+      "op": "SWAP1"
+    },
+    "185": {
+      "op": "POP"
+    },
+    "186": {
+      "jump": "o",
+      "op": "JUMP"
+    }
+  },
+  "sha1": "0955569af748ae48b0c5915a55e601d5e161e3fa",
+  "source": "// SCH Course Copyright Policy (C): DO-NOT-SHARE-WITH-ANYONE\n// https://smartcontractshacking.com/#copyright-policy\npragma solidity ^0.8.13;\n\ninterface IPool {\n    function flashLoan(uint256 amount) external;\n}\n\n/**\n * @title GreedyReceiver\n * @author JohnnyTime (https://smartcontractshacking.com)\n */\ncontract GreedyReceiver {\n\n    // TODO: Implement Greedy Receiver Logic (Not paying back the loan)\n    IPool pool;\n\n    constructor(address _poolAddress) {\n        pool = IPool(_poolAddress);\n    }\n\n    // TODO: Complete this function\n    function flashLoan(uint256 amount) external {\n        pool.flashLoan(amount);\n    }\n\n    // TODO: Complete this function\n    function getETH() external payable {}\n}",
+  "sourceMap": "303:403:12:-:0;;;423:77;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;467:4;:26;;-1:-1:-1;;;;;;467:26:12;-1:-1:-1;;;;;467:26:12;;;;;;;;;;303:403;;14:290:20;84:6;137:2;125:9;116:7;112:23;108:32;105:52;;;153:1;150;143:12;105:52;179:16;;-1:-1:-1;;;;;224:31:20;;214:42;;204:70;;270:1;267;260:12;204:70;293:5;14:290;-1:-1:-1;;;14:290:20:o;:::-;303:403:12;;;;;;",
+  "sourcePath": "contracts/flash-loans-1/GreedyReceiver.sol",
+  "type": "contract"
+}

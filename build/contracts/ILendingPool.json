@@ -1,0 +1,1625 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "FLASHLOAN_PREMIUM_TOTAL",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "reserve",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "interestRateMode",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint16",
+          "name": "referralCode",
+          "type": "uint16"
+        },
+        {
+          "internalType": "address",
+          "name": "onBehalfOf",
+          "type": "address"
+        }
+      ],
+      "name": "borrow",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "reserve",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "onBehalfOf",
+          "type": "address"
+        },
+        {
+          "internalType": "uint16",
+          "name": "referralCode",
+          "type": "uint16"
+        }
+      ],
+      "name": "deposit",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "receiver",
+          "type": "address"
+        },
+        {
+          "internalType": "address[]",
+          "name": "assets",
+          "type": "address[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "amounts",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "modes",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "address",
+          "name": "onBehalfOf",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "params",
+          "type": "bytes"
+        },
+        {
+          "internalType": "uint16",
+          "name": "referralCode",
+          "type": "uint16"
+        }
+      ],
+      "name": "flashLoan",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "collateral",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "reserve",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "purchaseAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "receiveAToken",
+          "type": "bool"
+        }
+      ],
+      "name": "liquidationCall",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "reserve",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "rateMode",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "onBehalfOf",
+          "type": "address"
+        }
+      ],
+      "name": "repay",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "reserve",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "useAsCollateral",
+          "type": "bool"
+        }
+      ],
+      "name": "setUserUseReserveAsCollateral",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "reserve",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "rateMode",
+          "type": "uint256"
+        }
+      ],
+      "name": "swapBorrowRateMode",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "reserve",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        }
+      ],
+      "name": "withdraw",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "40": "contracts/interfaces/ILendingPool.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/interfaces/ILendingPool.sol",
+    "exportedSymbols": {
+      "ILendingPool": [
+        2570
+      ]
+    },
+    "id": 2571,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2465,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".13"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "116:24:40"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ILendingPool",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 2570,
+        "linearizedBaseContracts": [
+          2570
+        ],
+        "name": "ILendingPool",
+        "nameLocation": "152:12:40",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "074b2e43",
+            "id": 2470,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "FLASHLOAN_PREMIUM_TOTAL",
+            "nameLocation": "178:23:40",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2466,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "201:2:40"
+            },
+            "returnParameters": {
+              "id": 2469,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2468,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2470,
+                  "src": "227:7:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2467,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "227:7:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "226:9:40"
+            },
+            "scope": 2570,
+            "src": "169:67:40",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 2471,
+              "nodeType": "StructuredDocumentation",
+              "src": "239:336:40",
+              "text": " @dev deposits The underlying asset into the reserve. A corresponding amount of the overlying asset (aTokens)\n is minted.\n @param reserve the address of the reserve\n @param amount the amount to be deposited\n @param referralCode integrators are assigned a referral code and can potentially receive rewards.*"
+            },
+            "functionSelector": "e8eda9df",
+            "id": 2482,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deposit",
+            "nameLocation": "587:7:40",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2480,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2473,
+                  "mutability": "mutable",
+                  "name": "reserve",
+                  "nameLocation": "608:7:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2482,
+                  "src": "600:15:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2472,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "600:7:40",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2475,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "629:6:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2482,
+                  "src": "621:14:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2474,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "621:7:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2477,
+                  "mutability": "mutable",
+                  "name": "onBehalfOf",
+                  "nameLocation": "649:10:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2482,
+                  "src": "641:18:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2476,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "641:7:40",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2479,
+                  "mutability": "mutable",
+                  "name": "referralCode",
+                  "nameLocation": "672:12:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2482,
+                  "src": "665:19:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 2478,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "665:6:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "594:94:40"
+            },
+            "returnParameters": {
+              "id": 2481,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "697:0:40"
+            },
+            "scope": 2570,
+            "src": "578:120:40",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 2483,
+              "nodeType": "StructuredDocumentation",
+              "src": "702:209:40",
+              "text": " @dev withdraws the assets of user.\n @param reserve the address of the reserve\n @param amount the underlying amount to be redeemed\n @param to address that will receive the underlying*"
+            },
+            "functionSelector": "69328dec",
+            "id": 2492,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdraw",
+            "nameLocation": "923:8:40",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2490,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2485,
+                  "mutability": "mutable",
+                  "name": "reserve",
+                  "nameLocation": "945:7:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2492,
+                  "src": "937:15:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2484,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "937:7:40",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2487,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "966:6:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2492,
+                  "src": "958:14:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2486,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "958:7:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2489,
+                  "mutability": "mutable",
+                  "name": "to",
+                  "nameLocation": "986:2:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2492,
+                  "src": "978:10:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2488,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "978:7:40",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "931:61:40"
+            },
+            "returnParameters": {
+              "id": 2491,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1001:0:40"
+            },
+            "scope": 2570,
+            "src": "914:88:40",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 2493,
+              "nodeType": "StructuredDocumentation",
+              "src": "1006:368:40",
+              "text": " @dev Allows users to borrow a specific amount of the reserve currency, provided that the borrower\n already deposited enough collateral.\n @param reserve the address of the reserve\n @param amount the amount to be borrowed\n @param interestRateMode the interest rate mode at which the user wants to borrow. Can be 0 (STABLE) or 1 (VARIABLE)*"
+            },
+            "functionSelector": "a415bcad",
+            "id": 2506,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "borrow",
+            "nameLocation": "1386:6:40",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2504,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2495,
+                  "mutability": "mutable",
+                  "name": "reserve",
+                  "nameLocation": "1406:7:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2506,
+                  "src": "1398:15:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2494,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1398:7:40",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2497,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "1427:6:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2506,
+                  "src": "1419:14:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2496,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1419:7:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2499,
+                  "mutability": "mutable",
+                  "name": "interestRateMode",
+                  "nameLocation": "1447:16:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2506,
+                  "src": "1439:24:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2498,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1439:7:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2501,
+                  "mutability": "mutable",
+                  "name": "referralCode",
+                  "nameLocation": "1476:12:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2506,
+                  "src": "1469:19:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 2500,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1469:6:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2503,
+                  "mutability": "mutable",
+                  "name": "onBehalfOf",
+                  "nameLocation": "1502:10:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2506,
+                  "src": "1494:18:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2502,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1494:7:40",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1392:124:40"
+            },
+            "returnParameters": {
+              "id": 2505,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1525:0:40"
+            },
+            "scope": 2570,
+            "src": "1377:149:40",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 2507,
+              "nodeType": "StructuredDocumentation",
+              "src": "1530:533:40",
+              "text": " @notice repays a borrow on the specific reserve, for the specified amount (or for the whole amount, if uint256(-1) is specified).\n @dev the target user is defined by onBehalfOf. If there is no repayment on behalf of another account,\n onBehalfOf must be equal to msg.sender.\n @param reserve the address of the reserve on which the user borrowed\n @param amount the amount to repay, or uint256(-1) if the user wants to repay everything\n @param onBehalfOf the address for which msg.sender is repaying.*"
+            },
+            "functionSelector": "573ade81",
+            "id": 2518,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "repay",
+            "nameLocation": "2075:5:40",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2516,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2509,
+                  "mutability": "mutable",
+                  "name": "reserve",
+                  "nameLocation": "2094:7:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2518,
+                  "src": "2086:15:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2508,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2086:7:40",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2511,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "2115:6:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2518,
+                  "src": "2107:14:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2510,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2107:7:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2513,
+                  "mutability": "mutable",
+                  "name": "rateMode",
+                  "nameLocation": "2135:8:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2518,
+                  "src": "2127:16:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2512,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2127:7:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2515,
+                  "mutability": "mutable",
+                  "name": "onBehalfOf",
+                  "nameLocation": "2157:10:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2518,
+                  "src": "2149:18:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2514,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2149:7:40",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2080:91:40"
+            },
+            "returnParameters": {
+              "id": 2517,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2180:0:40"
+            },
+            "scope": 2570,
+            "src": "2066:115:40",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 2519,
+              "nodeType": "StructuredDocumentation",
+              "src": "2185:245:40",
+              "text": " @dev borrowers can user this function to swap between stable and variable borrow rate modes.\n @param reserve the address of the reserve on which the user borrowed\n @param rateMode the rate mode that the user wants to swap*"
+            },
+            "functionSelector": "94ba89a2",
+            "id": 2526,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "swapBorrowRateMode",
+            "nameLocation": "2442:18:40",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2524,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2521,
+                  "mutability": "mutable",
+                  "name": "reserve",
+                  "nameLocation": "2469:7:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2526,
+                  "src": "2461:15:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2520,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2461:7:40",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2523,
+                  "mutability": "mutable",
+                  "name": "rateMode",
+                  "nameLocation": "2486:8:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2526,
+                  "src": "2478:16:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2522,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2478:7:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2460:35:40"
+            },
+            "returnParameters": {
+              "id": 2525,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2504:0:40"
+            },
+            "scope": 2570,
+            "src": "2433:72:40",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 2527,
+              "nodeType": "StructuredDocumentation",
+              "src": "2509:243:40",
+              "text": " @dev allows depositors to enable or disable a specific deposit as collateral.\n @param reserve the address of the reserve\n @param useAsCollateral true if the user wants to user the deposit as collateral, false otherwise.*"
+            },
+            "functionSelector": "5a3b74b9",
+            "id": 2534,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setUserUseReserveAsCollateral",
+            "nameLocation": "2764:29:40",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2532,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2529,
+                  "mutability": "mutable",
+                  "name": "reserve",
+                  "nameLocation": "2802:7:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2534,
+                  "src": "2794:15:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2528,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2794:7:40",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2531,
+                  "mutability": "mutable",
+                  "name": "useAsCollateral",
+                  "nameLocation": "2816:15:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2534,
+                  "src": "2811:20:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2530,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2811:4:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2793:39:40"
+            },
+            "returnParameters": {
+              "id": 2533,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2841:0:40"
+            },
+            "scope": 2570,
+            "src": "2755:87:40",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 2535,
+              "nodeType": "StructuredDocumentation",
+              "src": "2846:493:40",
+              "text": " @dev users can invoke this function to liquidate an undercollateralized position.\n @param reserve the address of the collateral to liquidated\n @param reserve the address of the principal reserve\n @param user the address of the borrower\n @param purchaseAmount the amount of principal that the liquidator wants to repay\n @param receiveAToken true if the liquidators wants to receive the aTokens, false if\n he wants to receive the underlying asset directly*"
+            },
+            "functionSelector": "00a718a9",
+            "id": 2548,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "liquidationCall",
+            "nameLocation": "3351:15:40",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2546,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2537,
+                  "mutability": "mutable",
+                  "name": "collateral",
+                  "nameLocation": "3380:10:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2548,
+                  "src": "3372:18:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2536,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3372:7:40",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2539,
+                  "mutability": "mutable",
+                  "name": "reserve",
+                  "nameLocation": "3404:7:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2548,
+                  "src": "3396:15:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2538,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3396:7:40",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2541,
+                  "mutability": "mutable",
+                  "name": "user",
+                  "nameLocation": "3425:4:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2548,
+                  "src": "3417:12:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2540,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3417:7:40",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2543,
+                  "mutability": "mutable",
+                  "name": "purchaseAmount",
+                  "nameLocation": "3443:14:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2548,
+                  "src": "3435:22:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2542,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3435:7:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2545,
+                  "mutability": "mutable",
+                  "name": "receiveAToken",
+                  "nameLocation": "3468:13:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2548,
+                  "src": "3463:18:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2544,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3463:4:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3366:119:40"
+            },
+            "returnParameters": {
+              "id": 2547,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3494:0:40"
+            },
+            "scope": 2570,
+            "src": "3342:153:40",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 2549,
+              "nodeType": "StructuredDocumentation",
+              "src": "3499:765:40",
+              "text": " @dev allows smartcontracts to access the liquidity of the pool within one transaction,\n as long as the amount taken plus a fee is returned. NOTE There are security concerns for developers of flashloan receiver contracts\n that must be kept into consideration. For further details please visit https://developers.aave.com\n @param receiver The address of the contract receiving the funds. The receiver should implement the IFlashLoanReceiver interface.\n @param assets the address of the principal reserve\n @param amounts the amount requested for this flashloan\n @param modes the flashloan borrow modes\n @param params a bytes array to be sent to the flashloan executor\n @param referralCode the referral code of the caller*"
+            },
+            "functionSelector": "ab9c4b5d",
+            "id": 2569,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "flashLoan",
+            "nameLocation": "4276:9:40",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2567,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2551,
+                  "mutability": "mutable",
+                  "name": "receiver",
+                  "nameLocation": "4299:8:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2569,
+                  "src": "4291:16:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2550,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4291:7:40",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2554,
+                  "mutability": "mutable",
+                  "name": "assets",
+                  "nameLocation": "4332:6:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2569,
+                  "src": "4313:25:40",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_calldata_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 2552,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "4313:7:40",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 2553,
+                    "nodeType": "ArrayTypeName",
+                    "src": "4313:9:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2557,
+                  "mutability": "mutable",
+                  "name": "amounts",
+                  "nameLocation": "4363:7:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2569,
+                  "src": "4344:26:40",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_calldata_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 2555,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "4344:7:40",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 2556,
+                    "nodeType": "ArrayTypeName",
+                    "src": "4344:9:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2560,
+                  "mutability": "mutable",
+                  "name": "modes",
+                  "nameLocation": "4395:5:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2569,
+                  "src": "4376:24:40",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_calldata_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 2558,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "4376:7:40",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 2559,
+                    "nodeType": "ArrayTypeName",
+                    "src": "4376:9:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2562,
+                  "mutability": "mutable",
+                  "name": "onBehalfOf",
+                  "nameLocation": "4414:10:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2569,
+                  "src": "4406:18:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2561,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4406:7:40",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2564,
+                  "mutability": "mutable",
+                  "name": "params",
+                  "nameLocation": "4445:6:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2569,
+                  "src": "4430:21:40",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 2563,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4430:5:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2566,
+                  "mutability": "mutable",
+                  "name": "referralCode",
+                  "nameLocation": "4464:12:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2569,
+                  "src": "4457:19:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 2565,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4457:6:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4285:195:40"
+            },
+            "returnParameters": {
+              "id": 2568,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4489:0:40"
+            },
+            "scope": 2570,
+            "src": "4267:223:40",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 2571,
+        "src": "142:4350:40",
+        "usedErrors": []
+      }
+    ],
+    "src": "116:4376:40"
+  },
+  "bytecode": "",
+  "bytecodeSha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+  "compiler": {
+    "evm_version": "istanbul",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.8.19+commit.7dd6d404"
+  },
+  "contractName": "ILendingPool",
+  "coverageMap": {
+    "branches": {},
+    "statements": {}
+  },
+  "dependencies": [],
+  "deployedBytecode": "",
+  "deployedSourceMap": "",
+  "language": "Solidity",
+  "natspec": {
+    "kind": "dev",
+    "methods": {
+      "borrow(address,uint256,uint256,uint16,address)": {
+        "details": "Allows users to borrow a specific amount of the reserve currency, provided that the borrower already deposited enough collateral.",
+        "params": {
+          "amount": "the amount to be borrowed",
+          "interestRateMode": "the interest rate mode at which the user wants to borrow. Can be 0 (STABLE) or 1 (VARIABLE)*",
+          "reserve": "the address of the reserve"
+        }
+      },
+      "deposit(address,uint256,address,uint16)": {
+        "details": "deposits The underlying asset into the reserve. A corresponding amount of the overlying asset (aTokens) is minted.",
+        "params": {
+          "amount": "the amount to be deposited",
+          "referralCode": "integrators are assigned a referral code and can potentially receive rewards.*",
+          "reserve": "the address of the reserve"
+        }
+      },
+      "flashLoan(address,address[],uint256[],uint256[],address,bytes,uint16)": {
+        "details": "allows smartcontracts to access the liquidity of the pool within one transaction, as long as the amount taken plus a fee is returned. NOTE There are security concerns for developers of flashloan receiver contracts that must be kept into consideration. For further details please visit https://developers.aave.com",
+        "params": {
+          "amounts": "the amount requested for this flashloan",
+          "assets": "the address of the principal reserve",
+          "modes": "the flashloan borrow modes",
+          "params": "a bytes array to be sent to the flashloan executor",
+          "receiver": "The address of the contract receiving the funds. The receiver should implement the IFlashLoanReceiver interface.",
+          "referralCode": "the referral code of the caller*"
+        }
+      },
+      "liquidationCall(address,address,address,uint256,bool)": {
+        "details": "users can invoke this function to liquidate an undercollateralized position.",
+        "params": {
+          "purchaseAmount": "the amount of principal that the liquidator wants to repay",
+          "receiveAToken": "true if the liquidators wants to receive the aTokens, false if he wants to receive the underlying asset directly*",
+          "reserve": "the address of the principal reserve",
+          "user": "the address of the borrower"
+        }
+      },
+      "repay(address,uint256,uint256,address)": {
+        "details": "the target user is defined by onBehalfOf. If there is no repayment on behalf of another account, onBehalfOf must be equal to msg.sender.",
+        "notice": "repays a borrow on the specific reserve, for the specified amount (or for the whole amount, if uint256(-1) is specified).",
+        "params": {
+          "amount": "the amount to repay, or uint256(-1) if the user wants to repay everything",
+          "onBehalfOf": "the address for which msg.sender is repaying.*",
+          "reserve": "the address of the reserve on which the user borrowed"
+        }
+      },
+      "setUserUseReserveAsCollateral(address,bool)": {
+        "details": "allows depositors to enable or disable a specific deposit as collateral.",
+        "params": {
+          "reserve": "the address of the reserve",
+          "useAsCollateral": "true if the user wants to user the deposit as collateral, false otherwise.*"
+        }
+      },
+      "swapBorrowRateMode(address,uint256)": {
+        "details": "borrowers can user this function to swap between stable and variable borrow rate modes.",
+        "params": {
+          "rateMode": "the rate mode that the user wants to swap*",
+          "reserve": "the address of the reserve on which the user borrowed"
+        }
+      },
+      "withdraw(address,uint256,address)": {
+        "details": "withdraws the assets of user.",
+        "params": {
+          "amount": "the underlying amount to be redeemed",
+          "reserve": "the address of the reserve",
+          "to": "address that will receive the underlying*"
+        }
+      }
+    },
+    "version": 1
+  },
+  "offset": [
+    142,
+    4492
+  ],
+  "opcodes": "",
+  "pcMap": {},
+  "sha1": "b6ddb556f088159cc5249f35821e8be9954cd227",
+  "source": "// SCH Course Copyright Policy (C): DO-NOT-SHARE-WITH-ANYONE\n// https://smartcontractshacking.com/#copyright-policy\npragma solidity ^0.8.13;\n\ninterface ILendingPool {\n  function FLASHLOAN_PREMIUM_TOTAL() external view returns (uint256);\n  /**\n   * @dev deposits The underlying asset into the reserve. A corresponding amount of the overlying asset (aTokens)\n   * is minted.\n   * @param reserve the address of the reserve\n   * @param amount the amount to be deposited\n   * @param referralCode integrators are assigned a referral code and can potentially receive rewards.\n   **/\n  function deposit(\n    address reserve,\n    uint256 amount,\n    address onBehalfOf,\n    uint16 referralCode\n  ) external;\n\n  /**\n   * @dev withdraws the assets of user.\n   * @param reserve the address of the reserve\n   * @param amount the underlying amount to be redeemed\n   * @param to address that will receive the underlying\n   **/\n  function withdraw(\n    address reserve,\n    uint256 amount,\n    address to\n  ) external;\n\n  /**\n   * @dev Allows users to borrow a specific amount of the reserve currency, provided that the borrower\n   * already deposited enough collateral.\n   * @param reserve the address of the reserve\n   * @param amount the amount to be borrowed\n   * @param interestRateMode the interest rate mode at which the user wants to borrow. Can be 0 (STABLE) or 1 (VARIABLE)\n   **/\n  function borrow(\n    address reserve,\n    uint256 amount,\n    uint256 interestRateMode,\n    uint16 referralCode,\n    address onBehalfOf\n  ) external;\n\n  /**\n   * @notice repays a borrow on the specific reserve, for the specified amount (or for the whole amount, if uint256(-1) is specified).\n   * @dev the target user is defined by onBehalfOf. If there is no repayment on behalf of another account,\n   * onBehalfOf must be equal to msg.sender.\n   * @param reserve the address of the reserve on which the user borrowed\n   * @param amount the amount to repay, or uint256(-1) if the user wants to repay everything\n   * @param onBehalfOf the address for which msg.sender is repaying.\n   **/\n  function repay(\n    address reserve,\n    uint256 amount,\n    uint256 rateMode,\n    address onBehalfOf\n  ) external;\n\n  /**\n   * @dev borrowers can user this function to swap between stable and variable borrow rate modes.\n   * @param reserve the address of the reserve on which the user borrowed\n   * @param rateMode the rate mode that the user wants to swap\n   **/\n  function swapBorrowRateMode(address reserve, uint256 rateMode) external;\n\n  /**\n   * @dev allows depositors to enable or disable a specific deposit as collateral.\n   * @param reserve the address of the reserve\n   * @param useAsCollateral true if the user wants to user the deposit as collateral, false otherwise.\n   **/\n  function setUserUseReserveAsCollateral(address reserve, bool useAsCollateral) external;\n\n  /**\n   * @dev users can invoke this function to liquidate an undercollateralized position.\n   * @param reserve the address of the collateral to liquidated\n   * @param reserve the address of the principal reserve\n   * @param user the address of the borrower\n   * @param purchaseAmount the amount of principal that the liquidator wants to repay\n   * @param receiveAToken true if the liquidators wants to receive the aTokens, false if\n   * he wants to receive the underlying asset directly\n   **/\n  function liquidationCall(\n    address collateral,\n    address reserve,\n    address user,\n    uint256 purchaseAmount,\n    bool receiveAToken\n  ) external;\n\n  /**\n   * @dev allows smartcontracts to access the liquidity of the pool within one transaction,\n   * as long as the amount taken plus a fee is returned. NOTE There are security concerns for developers of flashloan receiver contracts\n   * that must be kept into consideration. For further details please visit https://developers.aave.com\n   * @param receiver The address of the contract receiving the funds. The receiver should implement the IFlashLoanReceiver interface.\n   * @param assets the address of the principal reserve\n   * @param amounts the amount requested for this flashloan\n   * @param modes the flashloan borrow modes\n   * @param params a bytes array to be sent to the flashloan executor\n   * @param referralCode the referral code of the caller\n   **/\n  function flashLoan(\n    address receiver,\n    address[] calldata assets,\n    uint256[] calldata amounts,\n    uint256[] calldata modes,\n    address onBehalfOf,\n    bytes calldata params,\n    uint16 referralCode\n  ) external;\n}",
+  "sourceMap": "",
+  "sourcePath": "contracts/interfaces/ILendingPool.sol",
+  "type": "interface"
+}

@@ -1,0 +1,73 @@
+dotenv: .env
+networks:
+    development:
+        gas_limit: max
+        gas_buffer: 1
+        gas_price: 0
+        #max_fee: null
+        #priority_fee: null
+        reverting_tx_gas_limit: max
+        default_contract_owner: true
+        cmd_settings:
+          #block_time: 12 # Uncomment me for FrontRunning exercises
+            port: 8545
+            gas_limit: 6721975
+            accounts: 10
+            chain_id: 1337
+            network_id: 1588949648
+            evm_version: istanbul
+            #fork: null
+            #disable_cache: null
+            mnemonic: brownie
+            default_balance: 100
+    mainnet-fork:
+        gas_limit: max
+        cmd_settings:
+            block_time: 12
+            blockNumber: 16776127 #15969633
+            port: 8545
+            #gas_limit: 6721975
+            accounts: 10
+            chain_id: 1337
+    mainnet-fork-3:
+        gas_limit: max
+        cmd_settings:
+          #block_time: 12  # uncomment me for gas_optmization-1 or any frontrunning exercise.
+            gasPrice: 0
+            #blockNumber: 15969633
+            port: 8545
+            gas_limit: 100000000
+            accounts: 10
+            chain_id: 1337
+            timeout: 120
+    hardhat-fork:
+        gas_limit: max
+        cmd_settings:
+            fork_block: 15969633
+            port: 8545
+    goerli-fork:
+        host: https://goerli.infura.io/v3/$GOERLI
+        gas_limit: max
+        cmd_settings:
+            fork_block: 8660077
+            gas_limit: 6721975
+            accounts: 10
+            chain_id: 1337
+    mainnet-fork-2:
+        host: https://mainnet.infura.io/v3/$WEB3_INFURA_PROJECT_ID
+        gas_limit: max
+        cmd_settings:
+            #fork_block: 8660077
+            gas_limit: 6721975
+            accounts: 10
+            chain_id: 1337
+dependencies:
+ - OpenZeppelin/openzeppelin-contracts@4.8.0
+compiler:
+ solc:
+  #version: '0.8.13'
+  remappings:
+    - '@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.8.0'
+#dotenv: .env
+wallets:
+  from_key: ${PRIVATE_KEY}

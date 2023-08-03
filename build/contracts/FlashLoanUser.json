@@ -1,0 +1,5372 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "poolAddress",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "tokenAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "getTokens",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "requestFlashLoan",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "0": "/Users/m4ud/.brownie/packages/OpenZeppelin/openzeppelin-contracts@4.8.0/contracts/access/Ownable.sol",
+    "13": "/Users/m4ud/.brownie/packages/OpenZeppelin/openzeppelin-contracts@4.8.0/contracts/utils/Context.sol",
+    "26": "contracts/dos-3/FlashLoanUser.sol",
+    "3": "/Users/m4ud/.brownie/packages/OpenZeppelin/openzeppelin-contracts@4.8.0/contracts/token/ERC20/IERC20.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/dos-3/FlashLoanUser.sol",
+    "exportedSymbols": {
+      "Context": [
+        16761
+      ],
+      "FlashLoanUser": [
+        1071
+      ],
+      "IERC20": [
+        6893
+      ],
+      "IShibaPool": [
+        1007
+      ],
+      "Ownable": [
+        6228
+      ]
+    },
+    "id": 1072,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 999,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".13"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "116:24:26"
+      },
+      {
+        "absolutePath": "/Users/m4ud/.brownie/packages/OpenZeppelin/openzeppelin-contracts@4.8.0/contracts/token/ERC20/IERC20.sol",
+        "file": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "id": 1000,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 1072,
+        "sourceUnit": 6894,
+        "src": "142:56:26",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/m4ud/.brownie/packages/OpenZeppelin/openzeppelin-contracts@4.8.0/contracts/access/Ownable.sol",
+        "file": "@openzeppelin/contracts/access/Ownable.sol",
+        "id": 1001,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 1072,
+        "sourceUnit": 6229,
+        "src": "199:52:26",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IShibaPool",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 1007,
+        "linearizedBaseContracts": [
+          1007
+        ],
+        "name": "IShibaPool",
+        "nameLocation": "263:10:26",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "9ab603b9",
+            "id": 1006,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "flashLoan",
+            "nameLocation": "289:9:26",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1004,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1003,
+                  "mutability": "mutable",
+                  "name": "borrowAmount",
+                  "nameLocation": "307:12:26",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1006,
+                  "src": "299:20:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1002,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "299:7:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "298:22:26"
+            },
+            "returnParameters": {
+              "id": 1005,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "329:0:26"
+            },
+            "scope": 1007,
+            "src": "280:50:26",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1072,
+        "src": "253:79:26",
+        "usedErrors": []
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 1009,
+              "name": "Ownable",
+              "nameLocations": [
+                "450:7:26"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 6228,
+              "src": "450:7:26"
+            },
+            "id": 1010,
+            "nodeType": "InheritanceSpecifier",
+            "src": "450:7:26"
+          }
+        ],
+        "canonicalName": "FlashLoanUser",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 1008,
+          "nodeType": "StructuredDocumentation",
+          "src": "334:89:26",
+          "text": " @title FlashLoanUser\n @author JohnnyTime (https://smartcontractshacking.com)"
+        },
+        "fullyImplemented": true,
+        "id": 1071,
+        "linearizedBaseContracts": [
+          1071,
+          6228,
+          16761
+        ],
+        "name": "FlashLoanUser",
+        "nameLocation": "433:13:26",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 1013,
+            "mutability": "immutable",
+            "name": "pool",
+            "nameLocation": "494:4:26",
+            "nodeType": "VariableDeclaration",
+            "scope": 1071,
+            "src": "465:33:26",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_IShibaPool_$1007",
+              "typeString": "contract IShibaPool"
+            },
+            "typeName": {
+              "id": 1012,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 1011,
+                "name": "IShibaPool",
+                "nameLocations": [
+                  "465:10:26"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 1007,
+                "src": "465:10:26"
+              },
+              "referencedDeclaration": 1007,
+              "src": "465:10:26",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IShibaPool_$1007",
+                "typeString": "contract IShibaPool"
+              }
+            },
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 1024,
+              "nodeType": "Block",
+              "src": "538:47:26",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 1022,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 1018,
+                      "name": "pool",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1013,
+                      "src": "548:4:26",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IShibaPool_$1007",
+                        "typeString": "contract IShibaPool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "id": 1020,
+                          "name": "poolAddress",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1015,
+                          "src": "566:11:26",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 1019,
+                        "name": "IShibaPool",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1007,
+                        "src": "555:10:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_IShibaPool_$1007_$",
+                          "typeString": "type(contract IShibaPool)"
+                        }
+                      },
+                      "id": 1021,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "nameLocations": [],
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "555:23:26",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IShibaPool_$1007",
+                        "typeString": "contract IShibaPool"
+                      }
+                    },
+                    "src": "548:30:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IShibaPool_$1007",
+                      "typeString": "contract IShibaPool"
+                    }
+                  },
+                  "id": 1023,
+                  "nodeType": "ExpressionStatement",
+                  "src": "548:30:26"
+                }
+              ]
+            },
+            "id": 1025,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1016,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1015,
+                  "mutability": "mutable",
+                  "name": "poolAddress",
+                  "nameLocation": "525:11:26",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1025,
+                  "src": "517:19:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1014,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "517:7:26",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "516:21:26"
+            },
+            "returnParameters": {
+              "id": 1017,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "538:0:26"
+            },
+            "scope": 1071,
+            "src": "505:80:26",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1055,
+              "nodeType": "Block",
+              "src": "715:214:26",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 1039,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "expression": {
+                            "id": 1033,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -15,
+                            "src": "733:3:26",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 1034,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberLocation": "737:6:26",
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "src": "733:10:26",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "arguments": [
+                            {
+                              "id": 1037,
+                              "name": "pool",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 1013,
+                              "src": "755:4:26",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_IShibaPool_$1007",
+                                "typeString": "contract IShibaPool"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_contract$_IShibaPool_$1007",
+                                "typeString": "contract IShibaPool"
+                              }
+                            ],
+                            "id": 1036,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "747:7:26",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": {
+                              "id": 1035,
+                              "name": "address",
+                              "nodeType": "ElementaryTypeName",
+                              "src": "747:7:26",
+                              "typeDescriptions": {}
+                            }
+                          },
+                          "id": 1038,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "nameLocations": [],
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "747:13:26",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "733:27:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "hexValue": "53656e646572206d75737420626520706f6f6c",
+                        "id": 1040,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "762:21:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_ee1d184cfe91189aee4630b0f63c035ed74d2951e0f9b3ca16f4acb125fce52d",
+                          "typeString": "literal_string \"Sender must be pool\""
+                        },
+                        "value": "Sender must be pool"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_ee1d184cfe91189aee4630b0f63c035ed74d2951e0f9b3ca16f4acb125fce52d",
+                          "typeString": "literal_string \"Sender must be pool\""
+                        }
+                      ],
+                      "id": 1032,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "725:7:26",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 1041,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "725:59:26",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1042,
+                  "nodeType": "ExpressionStatement",
+                  "src": "725:59:26"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "expression": {
+                              "id": 1048,
+                              "name": "msg",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": -15,
+                              "src": "873:3:26",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_message",
+                                "typeString": "msg"
+                              }
+                            },
+                            "id": 1049,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberLocation": "877:6:26",
+                            "memberName": "sender",
+                            "nodeType": "MemberAccess",
+                            "src": "873:10:26",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          },
+                          {
+                            "id": 1050,
+                            "name": "amount",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1029,
+                            "src": "885:6:26",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            },
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          ],
+                          "expression": {
+                            "arguments": [
+                              {
+                                "id": 1045,
+                                "name": "tokenAddress",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 1027,
+                                "src": "850:12:26",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              ],
+                              "id": 1044,
+                              "name": "IERC20",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 6893,
+                              "src": "843:6:26",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_contract$_IERC20_$6893_$",
+                                "typeString": "type(contract IERC20)"
+                              }
+                            },
+                            "id": 1046,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "typeConversion",
+                            "lValueRequested": false,
+                            "nameLocations": [],
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "843:20:26",
+                            "tryCall": false,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_IERC20_$6893",
+                              "typeString": "contract IERC20"
+                            }
+                          },
+                          "id": 1047,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberLocation": "864:8:26",
+                          "memberName": "transfer",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 6860,
+                          "src": "843:29:26",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
+                            "typeString": "function (address,uint256) external returns (bool)"
+                          }
+                        },
+                        "id": 1051,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "843:49:26",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "hexValue": "5472616e73666572206f6620746f6b656e73206661696c6564",
+                        "id": 1052,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "894:27:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_eafaa33b21cbc57e30fceeeae78e898cf81244c64fe1fa1386a00185f0a5f4ff",
+                          "typeString": "literal_string \"Transfer of tokens failed\""
+                        },
+                        "value": "Transfer of tokens failed"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_eafaa33b21cbc57e30fceeeae78e898cf81244c64fe1fa1386a00185f0a5f4ff",
+                          "typeString": "literal_string \"Transfer of tokens failed\""
+                        }
+                      ],
+                      "id": 1043,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "835:7:26",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 1053,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "835:87:26",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1054,
+                  "nodeType": "ExpressionStatement",
+                  "src": "835:87:26"
+                }
+              ]
+            },
+            "functionSelector": "2c512d6e",
+            "id": 1056,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTokens",
+            "nameLocation": "658:9:26",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1030,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1027,
+                  "mutability": "mutable",
+                  "name": "tokenAddress",
+                  "nameLocation": "676:12:26",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1056,
+                  "src": "668:20:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1026,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "668:7:26",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1029,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "698:6:26",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1056,
+                  "src": "690:14:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1028,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "690:7:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "667:38:26"
+            },
+            "returnParameters": {
+              "id": 1031,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "715:0:26"
+            },
+            "scope": 1071,
+            "src": "649:280:26",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 1069,
+              "nodeType": "Block",
+              "src": "996:39:26",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 1066,
+                        "name": "amount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1058,
+                        "src": "1021:6:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "id": 1063,
+                        "name": "pool",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1013,
+                        "src": "1006:4:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IShibaPool_$1007",
+                          "typeString": "contract IShibaPool"
+                        }
+                      },
+                      "id": 1065,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "1011:9:26",
+                      "memberName": "flashLoan",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1006,
+                      "src": "1006:14:26",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256) external"
+                      }
+                    },
+                    "id": 1067,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1006:22:26",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1068,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1006:22:26"
+                }
+              ]
+            },
+            "functionSelector": "a87eba3c",
+            "id": 1070,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 1061,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 1060,
+                  "name": "onlyOwner",
+                  "nameLocations": [
+                    "986:9:26"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 6147,
+                  "src": "986:9:26"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "986:9:26"
+              }
+            ],
+            "name": "requestFlashLoan",
+            "nameLocation": "944:16:26",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1059,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1058,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "969:6:26",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1070,
+                  "src": "961:14:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1057,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "961:7:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "960:16:26"
+            },
+            "returnParameters": {
+              "id": 1062,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "996:0:26"
+            },
+            "scope": 1071,
+            "src": "935:100:26",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1072,
+        "src": "424:613:26",
+        "usedErrors": []
+      }
+    ],
+    "src": "116:921:26"
+  },
+  "bytecode": "60a060405234801561001057600080fd5b5060405161057138038061057183398101604081905261002f91610099565b61003833610049565b6001600160a01b03166080526100c9565b600080546001600160a01b038381166001600160a01b0319831681178455604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b6000602082840312156100ab57600080fd5b81516001600160a01b03811681146100c257600080fd5b9392505050565b6080516104876100ea6000396000818160c9015261022401526104876000f3fe608060405234801561001057600080fd5b50600436106100575760003560e01c80632c512d6e1461005c578063715018a6146100715780638da5cb5b14610079578063a87eba3c14610098578063f2fde38b146100ab575b600080fd5b61006f61006a3660046103ca565b6100be565b005b61006f6101f2565b600054604080516001600160a01b039092168252519081900360200190f35b61006f6100a63660046103f4565b610206565b61006f6100b936600461040d565b61028b565b336001600160a01b037f000000000000000000000000000000000000000000000000000000000000000016146101315760405162461bcd60e51b815260206004820152601360248201527214d95b99195c881b5d5cdd081899481c1bdbdb606a1b60448201526064015b60405180910390fd5b60405163a9059cbb60e01b8152336004820152602481018290526001600160a01b0383169063a9059cbb906044016020604051808303816000875af115801561017e573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906101a2919061042f565b6101ee5760405162461bcd60e51b815260206004820152601960248201527f5472616e73666572206f6620746f6b656e73206661696c6564000000000000006044820152606401610128565b5050565b6101fa610304565b610204600061035e565b565b61020e610304565b604051639ab603b960e01b8152600481018290527f00000000000000000000000000000000000000000000000000000000000000006001600160a01b031690639ab603b990602401600060405180830381600087803b15801561027057600080fd5b505af1158015610284573d6000803e3d6000fd5b5050505050565b610293610304565b6001600160a01b0381166102f85760405162461bcd60e51b815260206004820152602660248201527f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160448201526564647265737360d01b6064820152608401610128565b6103018161035e565b50565b6000546001600160a01b031633146102045760405162461bcd60e51b815260206004820181905260248201527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e65726044820152606401610128565b600080546001600160a01b038381166001600160a01b0319831681178455604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b80356001600160a01b03811681146103c557600080fd5b919050565b600080604083850312156103dd57600080fd5b6103e6836103ae565b946020939093013593505050565b60006020828403121561040657600080fd5b5035919050565b60006020828403121561041f57600080fd5b610428826103ae565b9392505050565b60006020828403121561044157600080fd5b8151801515811461042857600080fdfea26469706673582212207bf1056074379ceb0d2fa03976d90920bb966c9a543e10bd255120d771271ec564736f6c63430008130033",
+  "bytecodeSha1": "90f1b71376dea86e8b473ec578838346c0184bf1",
+  "compiler": {
+    "evm_version": "istanbul",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.8.19+commit.7dd6d404"
+  },
+  "contractName": "FlashLoanUser",
+  "coverageMap": {
+    "branches": {
+      "0": {
+        "Ownable._checkOwner": {
+          "14": [
+            1422,
+            1445,
+            true
+          ]
+        },
+        "Ownable.transferOwnership": {
+          "13": [
+            2169,
+            2191,
+            true
+          ]
+        }
+      },
+      "13": {},
+      "26": {
+        "FlashLoanUser.getTokens": {
+          "11": [
+            733,
+            760,
+            true
+          ],
+          "12": [
+            843,
+            892,
+            true
+          ]
+        }
+      },
+      "3": {}
+    },
+    "statements": {
+      "0": {
+        "Ownable._checkOwner": {
+          "8": [
+            1414,
+            1482
+          ]
+        },
+        "Ownable._transferOwnership": {
+          "9": [
+            2541,
+            2558
+          ],
+          "10": [
+            2568,
+            2613
+          ]
+        },
+        "Ownable.owner": {
+          "0": [
+            1266,
+            1279
+          ]
+        },
+        "Ownable.renounceOwnership": {
+          "3": [
+            1895,
+            1925
+          ]
+        },
+        "Ownable.transferOwnership": {
+          "5": [
+            2161,
+            2234
+          ],
+          "6": [
+            2244,
+            2272
+          ]
+        }
+      },
+      "13": {
+        "Context._msgSender": {
+          "7": [
+            712,
+            729
+          ]
+        }
+      },
+      "26": {
+        "FlashLoanUser.getTokens": {
+          "1": [
+            725,
+            784
+          ],
+          "2": [
+            835,
+            922
+          ]
+        },
+        "FlashLoanUser.requestFlashLoan": {
+          "4": [
+            1006,
+            1028
+          ]
+        }
+      },
+      "3": {}
+    }
+  },
+  "dependencies": [
+    "OpenZeppelin/openzeppelin-contracts@4.8.0/Context",
+    "OpenZeppelin/openzeppelin-contracts@4.8.0/IERC20",
+    "IShibaPool",
+    "OpenZeppelin/openzeppelin-contracts@4.8.0/Ownable"
+  ],
+  "deployedBytecode": "608060405234801561001057600080fd5b50600436106100575760003560e01c80632c512d6e1461005c578063715018a6146100715780638da5cb5b14610079578063a87eba3c14610098578063f2fde38b146100ab575b600080fd5b61006f61006a3660046103ca565b6100be565b005b61006f6101f2565b600054604080516001600160a01b039092168252519081900360200190f35b61006f6100a63660046103f4565b610206565b61006f6100b936600461040d565b61028b565b336001600160a01b037f000000000000000000000000000000000000000000000000000000000000000016146101315760405162461bcd60e51b815260206004820152601360248201527214d95b99195c881b5d5cdd081899481c1bdbdb606a1b60448201526064015b60405180910390fd5b60405163a9059cbb60e01b8152336004820152602481018290526001600160a01b0383169063a9059cbb906044016020604051808303816000875af115801561017e573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906101a2919061042f565b6101ee5760405162461bcd60e51b815260206004820152601960248201527f5472616e73666572206f6620746f6b656e73206661696c6564000000000000006044820152606401610128565b5050565b6101fa610304565b610204600061035e565b565b61020e610304565b604051639ab603b960e01b8152600481018290527f00000000000000000000000000000000000000000000000000000000000000006001600160a01b031690639ab603b990602401600060405180830381600087803b15801561027057600080fd5b505af1158015610284573d6000803e3d6000fd5b5050505050565b610293610304565b6001600160a01b0381166102f85760405162461bcd60e51b815260206004820152602660248201527f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160448201526564647265737360d01b6064820152608401610128565b6103018161035e565b50565b6000546001600160a01b031633146102045760405162461bcd60e51b815260206004820181905260248201527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e65726044820152606401610128565b600080546001600160a01b038381166001600160a01b0319831681178455604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b80356001600160a01b03811681146103c557600080fd5b919050565b600080604083850312156103dd57600080fd5b6103e6836103ae565b946020939093013593505050565b60006020828403121561040657600080fd5b5035919050565b60006020828403121561041f57600080fd5b610428826103ae565b9392505050565b60006020828403121561044157600080fd5b8151801515811461042857600080fdfea26469706673582212207bf1056074379ceb0d2fa03976d90920bb966c9a543e10bd255120d771271ec564736f6c63430008130033",
+  "deployedSourceMap": "424:613:26:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;649:280;;;;;;:::i;:::-;;:::i;:::-;;1831:101:0;;;:::i;1201:85::-;1247:7;1273:6;1201:85;;;-1:-1:-1;;;;;1273:6:0;;;597:51:63;;1201:85:0;;;;;585:2:63;1201:85:0;;;935:100:26;;;;;;:::i;:::-;;:::i;2081:198:0:-;;;;;;:::i;:::-;;:::i;649:280:26:-;733:10;-1:-1:-1;;;;;755:4:26;733:27;;725:59;;;;-1:-1:-1;;;725:59:26;;1237:2:63;725:59:26;;;1219:21:63;1276:2;1256:18;;;1249:30;-1:-1:-1;;;1295:18:63;;;1288:49;1354:18;;725:59:26;;;;;;;;;843:49;;-1:-1:-1;;;843:49:26;;873:10;843:49;;;1557:51:63;1624:18;;;1617:34;;;-1:-1:-1;;;;;843:29:26;;;;;1530:18:63;;843:49:26;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;835:87;;;;-1:-1:-1;;;835:87:26;;2146:2:63;835:87:26;;;2128:21:63;2185:2;2165:18;;;2158:30;2224:27;2204:18;;;2197:55;2269:18;;835:87:26;1944:349:63;835:87:26;649:280;;:::o;1831:101:0:-;1094:13;:11;:13::i;:::-;1895:30:::1;1922:1;1895:18;:30::i;:::-;1831:101::o:0;935:100:26:-;1094:13:0;:11;:13::i;:::-;1006:22:26::1;::::0;-1:-1:-1;;;1006:22:26;;::::1;::::0;::::1;2444:25:63::0;;;1006:4:26::1;-1:-1:-1::0;;;;;1006:14:26::1;::::0;::::1;::::0;2417:18:63;;1006:22:26::1;;;;;;;;;;;;;;;;;::::0;::::1;;;;;;;;;;;;::::0;::::1;;;;;;;;;935:100:::0;:::o;2081:198:0:-;1094:13;:11;:13::i;:::-;-1:-1:-1;;;;;2169:22:0;::::1;2161:73;;;::::0;-1:-1:-1;;;2161:73:0;;2682:2:63;2161:73:0::1;::::0;::::1;2664:21:63::0;2721:2;2701:18;;;2694:30;2760:34;2740:18;;;2733:62;-1:-1:-1;;;2811:18:63;;;2804:36;2857:19;;2161:73:0::1;2480:402:63::0;2161:73:0::1;2244:28;2263:8;2244:18;:28::i;:::-;2081:198:::0;:::o;1359:130::-;1247:7;1273:6;-1:-1:-1;;;;;1273:6:0;719:10:13;1422:23:0;1414:68;;;;-1:-1:-1;;;1414:68:0;;3089:2:63;1414:68:0;;;3071:21:63;;;3108:18;;;3101:30;3167:34;3147:18;;;3140:62;3219:18;;1414:68:0;2887:356:63;2433:187:0;2506:16;2525:6;;-1:-1:-1;;;;;2541:17:0;;;-1:-1:-1;;;;;;2541:17:0;;;;;;2573:40;;2525:6;;;;;;;2573:40;;2506:16;2573:40;2496:124;2433:187;:::o;14:173:63:-;82:20;;-1:-1:-1;;;;;131:31:63;;121:42;;111:70;;177:1;174;167:12;111:70;14:173;;;:::o;192:254::-;260:6;268;321:2;309:9;300:7;296:23;292:32;289:52;;;337:1;334;327:12;289:52;360:29;379:9;360:29;:::i;:::-;350:39;436:2;421:18;;;;408:32;;-1:-1:-1;;;192:254:63:o;659:180::-;718:6;771:2;759:9;750:7;746:23;742:32;739:52;;;787:1;784;777:12;739:52;-1:-1:-1;810:23:63;;659:180;-1:-1:-1;659:180:63:o;844:186::-;903:6;956:2;944:9;935:7;931:23;927:32;924:52;;;972:1;969;962:12;924:52;995:29;1014:9;995:29;:::i;:::-;985:39;844:186;-1:-1:-1;;;844:186:63:o;1662:277::-;1729:6;1782:2;1770:9;1761:7;1757:23;1753:32;1750:52;;;1798:1;1795;1788:12;1750:52;1830:9;1824:16;1883:5;1876:13;1869:21;1862:5;1859:32;1849:60;;1905:1;1902;1895:12",
+  "language": "Solidity",
+  "natspec": {
+    "author": "JohnnyTime (https://smartcontractshacking.com)",
+    "kind": "dev",
+    "methods": {
+      "owner()": {
+        "details": "Returns the address of the current owner."
+      },
+      "renounceOwnership()": {
+        "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+      },
+      "transferOwnership(address)": {
+        "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+      }
+    },
+    "title": "FlashLoanUser",
+    "version": 1
+  },
+  "offset": [
+    424,
+    1037
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH2 0x10 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x4 CALLDATASIZE LT PUSH2 0x57 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x2C512D6E EQ PUSH2 0x5C JUMPI DUP1 PUSH4 0x715018A6 EQ PUSH2 0x71 JUMPI DUP1 PUSH4 0x8DA5CB5B EQ PUSH2 0x79 JUMPI DUP1 PUSH4 0xA87EBA3C EQ PUSH2 0x98 JUMPI DUP1 PUSH4 0xF2FDE38B EQ PUSH2 0xAB JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH2 0x6F PUSH2 0x6A CALLDATASIZE PUSH1 0x4 PUSH2 0x3CA JUMP JUMPDEST PUSH2 0xBE JUMP JUMPDEST STOP JUMPDEST PUSH2 0x6F PUSH2 0x1F2 JUMP JUMPDEST PUSH1 0x0 SLOAD PUSH1 0x40 DUP1 MLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB SWAP1 SWAP3 AND DUP3 MSTORE MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x20 ADD SWAP1 RETURN JUMPDEST PUSH2 0x6F PUSH2 0xA6 CALLDATASIZE PUSH1 0x4 PUSH2 0x3F4 JUMP JUMPDEST PUSH2 0x206 JUMP JUMPDEST PUSH2 0x6F PUSH2 0xB9 CALLDATASIZE PUSH1 0x4 PUSH2 0x40D JUMP JUMPDEST PUSH2 0x28B JUMP JUMPDEST CALLER PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB PUSH32 0x0 AND EQ PUSH2 0x131 JUMPI PUSH1 0x40 MLOAD PUSH3 0x461BCD PUSH1 0xE5 SHL DUP2 MSTORE PUSH1 0x20 PUSH1 0x4 DUP3 ADD MSTORE PUSH1 0x13 PUSH1 0x24 DUP3 ADD MSTORE PUSH19 0x14D95B99195C881B5D5CDD081899481C1BDBDB PUSH1 0x6A SHL PUSH1 0x44 DUP3 ADD MSTORE PUSH1 0x64 ADD JUMPDEST PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 REVERT JUMPDEST PUSH1 0x40 MLOAD PUSH4 0xA9059CBB PUSH1 0xE0 SHL DUP2 MSTORE CALLER PUSH1 0x4 DUP3 ADD MSTORE PUSH1 0x24 DUP2 ADD DUP3 SWAP1 MSTORE PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB DUP4 AND SWAP1 PUSH4 0xA9059CBB SWAP1 PUSH1 0x44 ADD PUSH1 0x20 PUSH1 0x40 MLOAD DUP1 DUP4 SUB DUP2 PUSH1 0x0 DUP8 GAS CALL ISZERO DUP1 ISZERO PUSH2 0x17E JUMPI RETURNDATASIZE PUSH1 0x0 DUP1 RETURNDATACOPY RETURNDATASIZE PUSH1 0x0 REVERT JUMPDEST POP POP POP POP PUSH1 0x40 MLOAD RETURNDATASIZE PUSH1 0x1F NOT PUSH1 0x1F DUP3 ADD AND DUP3 ADD DUP1 PUSH1 0x40 MSTORE POP DUP2 ADD SWAP1 PUSH2 0x1A2 SWAP2 SWAP1 PUSH2 0x42F JUMP JUMPDEST PUSH2 0x1EE JUMPI PUSH1 0x40 MLOAD PUSH3 0x461BCD PUSH1 0xE5 SHL DUP2 MSTORE PUSH1 0x20 PUSH1 0x4 DUP3 ADD MSTORE PUSH1 0x19 PUSH1 0x24 DUP3 ADD MSTORE PUSH32 0x5472616E73666572206F6620746F6B656E73206661696C656400000000000000 PUSH1 0x44 DUP3 ADD MSTORE PUSH1 0x64 ADD PUSH2 0x128 JUMP JUMPDEST POP POP JUMP JUMPDEST PUSH2 0x1FA PUSH2 0x304 JUMP JUMPDEST PUSH2 0x204 PUSH1 0x0 PUSH2 0x35E JUMP JUMPDEST JUMP JUMPDEST PUSH2 0x20E PUSH2 0x304 JUMP JUMPDEST PUSH1 0x40 MLOAD PUSH4 0x9AB603B9 PUSH1 0xE0 SHL DUP2 MSTORE PUSH1 0x4 DUP2 ADD DUP3 SWAP1 MSTORE PUSH32 0x0 PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND SWAP1 PUSH4 0x9AB603B9 SWAP1 PUSH1 0x24 ADD PUSH1 0x0 PUSH1 0x40 MLOAD DUP1 DUP4 SUB DUP2 PUSH1 0x0 DUP8 DUP1 EXTCODESIZE ISZERO DUP1 ISZERO PUSH2 0x270 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP GAS CALL ISZERO DUP1 ISZERO PUSH2 0x284 JUMPI RETURNDATASIZE PUSH1 0x0 DUP1 RETURNDATACOPY RETURNDATASIZE PUSH1 0x0 REVERT JUMPDEST POP POP POP POP POP JUMP JUMPDEST PUSH2 0x293 PUSH2 0x304 JUMP JUMPDEST PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB DUP2 AND PUSH2 0x2F8 JUMPI PUSH1 0x40 MLOAD PUSH3 0x461BCD PUSH1 0xE5 SHL DUP2 MSTORE PUSH1 0x20 PUSH1 0x4 DUP3 ADD MSTORE PUSH1 0x26 PUSH1 0x24 DUP3 ADD MSTORE PUSH32 0x4F776E61626C653A206E6577206F776E657220697320746865207A65726F2061 PUSH1 0x44 DUP3 ADD MSTORE PUSH6 0x646472657373 PUSH1 0xD0 SHL PUSH1 0x64 DUP3 ADD MSTORE PUSH1 0x84 ADD PUSH2 0x128 JUMP JUMPDEST PUSH2 0x301 DUP2 PUSH2 0x35E JUMP JUMPDEST POP JUMP JUMPDEST PUSH1 0x0 SLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND CALLER EQ PUSH2 0x204 JUMPI PUSH1 0x40 MLOAD PUSH3 0x461BCD PUSH1 0xE5 SHL DUP2 MSTORE PUSH1 0x20 PUSH1 0x4 DUP3 ADD DUP2 SWAP1 MSTORE PUSH1 0x24 DUP3 ADD MSTORE PUSH32 0x4F776E61626C653A2063616C6C6572206973206E6F7420746865206F776E6572 PUSH1 0x44 DUP3 ADD MSTORE PUSH1 0x64 ADD PUSH2 0x128 JUMP JUMPDEST PUSH1 0x0 DUP1 SLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB DUP4 DUP2 AND PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB NOT DUP4 AND DUP2 OR DUP5 SSTORE PUSH1 0x40 MLOAD SWAP2 SWAP1 SWAP3 AND SWAP3 DUP4 SWAP2 PUSH32 0x8BE0079C531659141344CD1FD0A4F28419497F9722A3DAAFE3B4186F6B6457E0 SWAP2 SWAP1 LOG3 POP POP JUMP JUMPDEST DUP1 CALLDATALOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB DUP2 AND DUP2 EQ PUSH2 0x3C5 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST SWAP2 SWAP1 POP JUMP JUMPDEST PUSH1 0x0 DUP1 PUSH1 0x40 DUP4 DUP6 SUB SLT ISZERO PUSH2 0x3DD JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH2 0x3E6 DUP4 PUSH2 0x3AE JUMP JUMPDEST SWAP5 PUSH1 0x20 SWAP4 SWAP1 SWAP4 ADD CALLDATALOAD SWAP4 POP POP POP JUMP JUMPDEST PUSH1 0x0 PUSH1 0x20 DUP3 DUP5 SUB SLT ISZERO PUSH2 0x406 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP CALLDATALOAD SWAP2 SWAP1 POP JUMP JUMPDEST PUSH1 0x0 PUSH1 0x20 DUP3 DUP5 SUB SLT ISZERO PUSH2 0x41F JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH2 0x428 DUP3 PUSH2 0x3AE JUMP JUMPDEST SWAP4 SWAP3 POP POP POP JUMP JUMPDEST PUSH1 0x0 PUSH1 0x20 DUP3 DUP5 SUB SLT ISZERO PUSH2 0x441 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP2 MLOAD DUP1 ISZERO ISZERO DUP2 EQ PUSH2 0x428 JUMPI PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 PUSH28 0xF1056074379CEB0D2FA03976D90920BB966C9A543E10BD255120D771 0x27 0x1E 0xC5 PUSH5 0x736F6C6343 STOP ADDMOD SGT STOP CALLER ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "MSTORE",
+      "path": "26"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "CALLVALUE",
+      "path": "26"
+    },
+    "6": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "DUP1",
+      "path": "26"
+    },
+    "7": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "ISZERO",
+      "path": "26"
+    },
+    "8": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "PUSH2",
+      "path": "26",
+      "value": "0x10"
+    },
+    "11": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "JUMPI",
+      "path": "26"
+    },
+    "12": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x0"
+    },
+    "14": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "DUP1",
+      "path": "26"
+    },
+    "15": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "REVERT",
+      "path": "26"
+    },
+    "16": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "JUMPDEST",
+      "path": "26"
+    },
+    "17": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "POP",
+      "path": "26"
+    },
+    "18": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x4"
+    },
+    "20": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "CALLDATASIZE",
+      "path": "26"
+    },
+    "21": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "LT",
+      "path": "26"
+    },
+    "22": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "PUSH2",
+      "path": "26",
+      "value": "0x57"
+    },
+    "25": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "JUMPI",
+      "path": "26"
+    },
+    "26": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x0"
+    },
+    "28": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "CALLDATALOAD",
+      "path": "26"
+    },
+    "29": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0xE0"
+    },
+    "31": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "SHR",
+      "path": "26"
+    },
+    "32": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "DUP1",
+      "path": "26"
+    },
+    "33": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "PUSH4",
+      "path": "26",
+      "value": "0x2C512D6E"
+    },
+    "38": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "EQ",
+      "path": "26"
+    },
+    "39": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "PUSH2",
+      "path": "26",
+      "value": "0x5C"
+    },
+    "42": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "JUMPI",
+      "path": "26"
+    },
+    "43": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "DUP1",
+      "path": "26"
+    },
+    "44": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "PUSH4",
+      "path": "26",
+      "value": "0x715018A6"
+    },
+    "49": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "EQ",
+      "path": "26"
+    },
+    "50": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "PUSH2",
+      "path": "26",
+      "value": "0x71"
+    },
+    "53": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "JUMPI",
+      "path": "26"
+    },
+    "54": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "DUP1",
+      "path": "26"
+    },
+    "55": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "PUSH4",
+      "path": "26",
+      "value": "0x8DA5CB5B"
+    },
+    "60": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "EQ",
+      "path": "26"
+    },
+    "61": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "PUSH2",
+      "path": "26",
+      "value": "0x79"
+    },
+    "64": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "JUMPI",
+      "path": "26"
+    },
+    "65": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "DUP1",
+      "path": "26"
+    },
+    "66": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "PUSH4",
+      "path": "26",
+      "value": "0xA87EBA3C"
+    },
+    "71": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "EQ",
+      "path": "26"
+    },
+    "72": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "PUSH2",
+      "path": "26",
+      "value": "0x98"
+    },
+    "75": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "JUMPI",
+      "path": "26"
+    },
+    "76": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "DUP1",
+      "path": "26"
+    },
+    "77": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "PUSH4",
+      "path": "26",
+      "value": "0xF2FDE38B"
+    },
+    "82": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "EQ",
+      "path": "26"
+    },
+    "83": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "PUSH2",
+      "path": "26",
+      "value": "0xAB"
+    },
+    "86": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "JUMPI",
+      "path": "26"
+    },
+    "87": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "JUMPDEST",
+      "path": "26"
+    },
+    "88": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x0"
+    },
+    "90": {
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "DUP1",
+      "path": "26"
+    },
+    "91": {
+      "first_revert": true,
+      "fn": null,
+      "offset": [
+        424,
+        1037
+      ],
+      "op": "REVERT",
+      "path": "26"
+    },
+    "92": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        649,
+        929
+      ],
+      "op": "JUMPDEST",
+      "path": "26"
+    },
+    "93": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        649,
+        929
+      ],
+      "op": "PUSH2",
+      "path": "26",
+      "value": "0x6F"
+    },
+    "96": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        649,
+        929
+      ],
+      "op": "PUSH2",
+      "path": "26",
+      "value": "0x6A"
+    },
+    "99": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        649,
+        929
+      ],
+      "op": "CALLDATASIZE",
+      "path": "26"
+    },
+    "100": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        649,
+        929
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x4"
+    },
+    "102": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        649,
+        929
+      ],
+      "op": "PUSH2",
+      "path": "26",
+      "value": "0x3CA"
+    },
+    "105": {
+      "fn": "FlashLoanUser.getTokens",
+      "jump": "i",
+      "offset": [
+        649,
+        929
+      ],
+      "op": "JUMP",
+      "path": "26"
+    },
+    "106": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        649,
+        929
+      ],
+      "op": "JUMPDEST",
+      "path": "26"
+    },
+    "107": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        649,
+        929
+      ],
+      "op": "PUSH2",
+      "path": "26",
+      "value": "0xBE"
+    },
+    "110": {
+      "fn": "FlashLoanUser.getTokens",
+      "jump": "i",
+      "offset": [
+        649,
+        929
+      ],
+      "op": "JUMP",
+      "path": "26"
+    },
+    "111": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        649,
+        929
+      ],
+      "op": "JUMPDEST",
+      "path": "26"
+    },
+    "112": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        649,
+        929
+      ],
+      "op": "STOP",
+      "path": "26"
+    },
+    "113": {
+      "fn": "Ownable.renounceOwnership",
+      "offset": [
+        1831,
+        1932
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "114": {
+      "fn": "Ownable.renounceOwnership",
+      "offset": [
+        1831,
+        1932
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x6F"
+    },
+    "117": {
+      "fn": "Ownable.renounceOwnership",
+      "offset": [
+        1831,
+        1932
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x1F2"
+    },
+    "120": {
+      "fn": "Ownable.renounceOwnership",
+      "jump": "i",
+      "offset": [
+        1831,
+        1932
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "121": {
+      "fn": "Ownable.owner",
+      "offset": [
+        1201,
+        1286
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "122": {
+      "fn": "Ownable.owner",
+      "offset": [
+        1247,
+        1254
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "124": {
+      "fn": "Ownable.owner",
+      "offset": [
+        1273,
+        1279
+      ],
+      "op": "SLOAD",
+      "path": "0",
+      "statement": 0
+    },
+    "125": {
+      "fn": "Ownable.owner",
+      "offset": [
+        1201,
+        1286
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "127": {
+      "fn": "Ownable.owner",
+      "offset": [
+        1201,
+        1286
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "128": {
+      "fn": "Ownable.owner",
+      "offset": [
+        1201,
+        1286
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "129": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "131": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "133": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "135": {
+      "op": "SHL"
+    },
+    "136": {
+      "op": "SUB"
+    },
+    "137": {
+      "fn": "Ownable.owner",
+      "offset": [
+        1273,
+        1279
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "138": {
+      "fn": "Ownable.owner",
+      "offset": [
+        1273,
+        1279
+      ],
+      "op": "SWAP3",
+      "path": "0"
+    },
+    "139": {
+      "fn": "Ownable.owner",
+      "offset": [
+        1273,
+        1279
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "140": {
+      "op": "DUP3"
+    },
+    "141": {
+      "op": "MSTORE"
+    },
+    "142": {
+      "fn": "Ownable.owner",
+      "offset": [
+        1201,
+        1286
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "143": {
+      "fn": "Ownable.owner",
+      "offset": [
+        1201,
+        1286
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "144": {
+      "fn": "Ownable.owner",
+      "offset": [
+        1201,
+        1286
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "145": {
+      "fn": "Ownable.owner",
+      "offset": [
+        1201,
+        1286
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "146": {
+      "fn": "Ownable.owner",
+      "offset": [
+        1201,
+        1286
+      ],
+      "op": "SUB",
+      "path": "0"
+    },
+    "147": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "149": {
+      "fn": "Ownable.owner",
+      "offset": [
+        1201,
+        1286
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "150": {
+      "fn": "Ownable.owner",
+      "offset": [
+        1201,
+        1286
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "151": {
+      "fn": "Ownable.owner",
+      "offset": [
+        1201,
+        1286
+      ],
+      "op": "RETURN",
+      "path": "0"
+    },
+    "152": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        935,
+        1035
+      ],
+      "op": "JUMPDEST",
+      "path": "26"
+    },
+    "153": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        935,
+        1035
+      ],
+      "op": "PUSH2",
+      "path": "26",
+      "value": "0x6F"
+    },
+    "156": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        935,
+        1035
+      ],
+      "op": "PUSH2",
+      "path": "26",
+      "value": "0xA6"
+    },
+    "159": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        935,
+        1035
+      ],
+      "op": "CALLDATASIZE",
+      "path": "26"
+    },
+    "160": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        935,
+        1035
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x4"
+    },
+    "162": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        935,
+        1035
+      ],
+      "op": "PUSH2",
+      "path": "26",
+      "value": "0x3F4"
+    },
+    "165": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "jump": "i",
+      "offset": [
+        935,
+        1035
+      ],
+      "op": "JUMP",
+      "path": "26"
+    },
+    "166": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        935,
+        1035
+      ],
+      "op": "JUMPDEST",
+      "path": "26"
+    },
+    "167": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        935,
+        1035
+      ],
+      "op": "PUSH2",
+      "path": "26",
+      "value": "0x206"
+    },
+    "170": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "jump": "i",
+      "offset": [
+        935,
+        1035
+      ],
+      "op": "JUMP",
+      "path": "26"
+    },
+    "171": {
+      "fn": "Ownable.transferOwnership",
+      "offset": [
+        2081,
+        2279
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "172": {
+      "fn": "Ownable.transferOwnership",
+      "offset": [
+        2081,
+        2279
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x6F"
+    },
+    "175": {
+      "fn": "Ownable.transferOwnership",
+      "offset": [
+        2081,
+        2279
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xB9"
+    },
+    "178": {
+      "fn": "Ownable.transferOwnership",
+      "offset": [
+        2081,
+        2279
+      ],
+      "op": "CALLDATASIZE",
+      "path": "0"
+    },
+    "179": {
+      "fn": "Ownable.transferOwnership",
+      "offset": [
+        2081,
+        2279
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "181": {
+      "fn": "Ownable.transferOwnership",
+      "offset": [
+        2081,
+        2279
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x40D"
+    },
+    "184": {
+      "fn": "Ownable.transferOwnership",
+      "jump": "i",
+      "offset": [
+        2081,
+        2279
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "185": {
+      "fn": "Ownable.transferOwnership",
+      "offset": [
+        2081,
+        2279
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "186": {
+      "fn": "Ownable.transferOwnership",
+      "offset": [
+        2081,
+        2279
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x28B"
+    },
+    "189": {
+      "fn": "Ownable.transferOwnership",
+      "jump": "i",
+      "offset": [
+        2081,
+        2279
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "190": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        649,
+        929
+      ],
+      "op": "JUMPDEST",
+      "path": "26"
+    },
+    "191": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        733,
+        743
+      ],
+      "op": "CALLER",
+      "path": "26",
+      "statement": 1
+    },
+    "192": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "194": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "196": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "198": {
+      "op": "SHL"
+    },
+    "199": {
+      "op": "SUB"
+    },
+    "200": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        755,
+        759
+      ],
+      "op": "PUSH32",
+      "path": "26",
+      "value": "0x0"
+    },
+    "233": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        733,
+        760
+      ],
+      "op": "AND",
+      "path": "26"
+    },
+    "234": {
+      "branch": 11,
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        733,
+        760
+      ],
+      "op": "EQ",
+      "path": "26"
+    },
+    "235": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        725,
+        784
+      ],
+      "op": "PUSH2",
+      "path": "26",
+      "value": "0x131"
+    },
+    "238": {
+      "branch": 11,
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        725,
+        784
+      ],
+      "op": "JUMPI",
+      "path": "26"
+    },
+    "239": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        725,
+        784
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x40"
+    },
+    "241": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        725,
+        784
+      ],
+      "op": "MLOAD",
+      "path": "26"
+    },
+    "242": {
+      "op": "PUSH3",
+      "value": "0x461BCD"
+    },
+    "246": {
+      "op": "PUSH1",
+      "value": "0xE5"
+    },
+    "248": {
+      "op": "SHL"
+    },
+    "249": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        725,
+        784
+      ],
+      "op": "DUP2",
+      "path": "26"
+    },
+    "250": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        725,
+        784
+      ],
+      "op": "MSTORE",
+      "path": "26"
+    },
+    "251": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "253": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        725,
+        784
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x4"
+    },
+    "255": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        725,
+        784
+      ],
+      "op": "DUP3",
+      "path": "26"
+    },
+    "256": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        725,
+        784
+      ],
+      "op": "ADD",
+      "path": "26"
+    },
+    "257": {
+      "op": "MSTORE"
+    },
+    "258": {
+      "op": "PUSH1",
+      "value": "0x13"
+    },
+    "260": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "262": {
+      "op": "DUP3"
+    },
+    "263": {
+      "op": "ADD"
+    },
+    "264": {
+      "op": "MSTORE"
+    },
+    "265": {
+      "op": "PUSH19",
+      "value": "0x14D95B99195C881B5D5CDD081899481C1BDBDB"
+    },
+    "285": {
+      "op": "PUSH1",
+      "value": "0x6A"
+    },
+    "287": {
+      "op": "SHL"
+    },
+    "288": {
+      "op": "PUSH1",
+      "value": "0x44"
+    },
+    "290": {
+      "op": "DUP3"
+    },
+    "291": {
+      "op": "ADD"
+    },
+    "292": {
+      "op": "MSTORE"
+    },
+    "293": {
+      "op": "PUSH1",
+      "value": "0x64"
+    },
+    "295": {
+      "op": "ADD"
+    },
+    "296": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        725,
+        784
+      ],
+      "op": "JUMPDEST",
+      "path": "26"
+    },
+    "297": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        725,
+        784
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x40"
+    },
+    "299": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        725,
+        784
+      ],
+      "op": "MLOAD",
+      "path": "26"
+    },
+    "300": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        725,
+        784
+      ],
+      "op": "DUP1",
+      "path": "26"
+    },
+    "301": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        725,
+        784
+      ],
+      "op": "SWAP2",
+      "path": "26"
+    },
+    "302": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        725,
+        784
+      ],
+      "op": "SUB",
+      "path": "26"
+    },
+    "303": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        725,
+        784
+      ],
+      "op": "SWAP1",
+      "path": "26"
+    },
+    "304": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        725,
+        784
+      ],
+      "op": "REVERT",
+      "optimizer_revert": true,
+      "path": "26"
+    },
+    "305": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        725,
+        784
+      ],
+      "op": "JUMPDEST",
+      "path": "26"
+    },
+    "306": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "statement": 2,
+      "value": "0x40"
+    },
+    "308": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "MLOAD",
+      "path": "26"
+    },
+    "309": {
+      "op": "PUSH4",
+      "value": "0xA9059CBB"
+    },
+    "314": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "316": {
+      "op": "SHL"
+    },
+    "317": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "DUP2",
+      "path": "26"
+    },
+    "318": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "MSTORE",
+      "path": "26"
+    },
+    "319": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        873,
+        883
+      ],
+      "op": "CALLER",
+      "path": "26"
+    },
+    "320": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x4"
+    },
+    "322": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "DUP3",
+      "path": "26"
+    },
+    "323": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "ADD",
+      "path": "26"
+    },
+    "324": {
+      "op": "MSTORE"
+    },
+    "325": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "327": {
+      "op": "DUP2"
+    },
+    "328": {
+      "op": "ADD"
+    },
+    "329": {
+      "op": "DUP3"
+    },
+    "330": {
+      "op": "SWAP1"
+    },
+    "331": {
+      "op": "MSTORE"
+    },
+    "332": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "334": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "336": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "338": {
+      "op": "SHL"
+    },
+    "339": {
+      "op": "SUB"
+    },
+    "340": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        872
+      ],
+      "op": "DUP4",
+      "path": "26"
+    },
+    "341": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        872
+      ],
+      "op": "AND",
+      "path": "26"
+    },
+    "342": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        872
+      ],
+      "op": "SWAP1",
+      "path": "26"
+    },
+    "343": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        872
+      ],
+      "op": "PUSH4",
+      "path": "26",
+      "value": "0xA9059CBB"
+    },
+    "348": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        872
+      ],
+      "op": "SWAP1",
+      "path": "26"
+    },
+    "349": {
+      "op": "PUSH1",
+      "value": "0x44"
+    },
+    "351": {
+      "op": "ADD"
+    },
+    "352": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x20"
+    },
+    "354": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x40"
+    },
+    "356": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "MLOAD",
+      "path": "26"
+    },
+    "357": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "DUP1",
+      "path": "26"
+    },
+    "358": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "DUP4",
+      "path": "26"
+    },
+    "359": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "SUB",
+      "path": "26"
+    },
+    "360": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "DUP2",
+      "path": "26"
+    },
+    "361": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x0"
+    },
+    "363": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "DUP8",
+      "path": "26"
+    },
+    "364": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "GAS",
+      "path": "26"
+    },
+    "365": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "CALL",
+      "path": "26"
+    },
+    "366": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "ISZERO",
+      "path": "26"
+    },
+    "367": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "DUP1",
+      "path": "26"
+    },
+    "368": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "ISZERO",
+      "path": "26"
+    },
+    "369": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "PUSH2",
+      "path": "26",
+      "value": "0x17E"
+    },
+    "372": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "JUMPI",
+      "path": "26"
+    },
+    "373": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "26"
+    },
+    "374": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x0"
+    },
+    "376": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "DUP1",
+      "path": "26"
+    },
+    "377": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "RETURNDATACOPY",
+      "path": "26"
+    },
+    "378": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "26"
+    },
+    "379": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x0"
+    },
+    "381": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "REVERT",
+      "path": "26"
+    },
+    "382": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "JUMPDEST",
+      "path": "26"
+    },
+    "383": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "POP",
+      "path": "26"
+    },
+    "384": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "POP",
+      "path": "26"
+    },
+    "385": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "POP",
+      "path": "26"
+    },
+    "386": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "POP",
+      "path": "26"
+    },
+    "387": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x40"
+    },
+    "389": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "MLOAD",
+      "path": "26"
+    },
+    "390": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "26"
+    },
+    "391": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x1F"
+    },
+    "393": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "NOT",
+      "path": "26"
+    },
+    "394": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x1F"
+    },
+    "396": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "DUP3",
+      "path": "26"
+    },
+    "397": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "ADD",
+      "path": "26"
+    },
+    "398": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "AND",
+      "path": "26"
+    },
+    "399": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "DUP3",
+      "path": "26"
+    },
+    "400": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "ADD",
+      "path": "26"
+    },
+    "401": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "DUP1",
+      "path": "26"
+    },
+    "402": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x40"
+    },
+    "404": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "MSTORE",
+      "path": "26"
+    },
+    "405": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "POP",
+      "path": "26"
+    },
+    "406": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "DUP2",
+      "path": "26"
+    },
+    "407": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "ADD",
+      "path": "26"
+    },
+    "408": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "SWAP1",
+      "path": "26"
+    },
+    "409": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "PUSH2",
+      "path": "26",
+      "value": "0x1A2"
+    },
+    "412": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "SWAP2",
+      "path": "26"
+    },
+    "413": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "SWAP1",
+      "path": "26"
+    },
+    "414": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "PUSH2",
+      "path": "26",
+      "value": "0x42F"
+    },
+    "417": {
+      "fn": "FlashLoanUser.getTokens",
+      "jump": "i",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "JUMP",
+      "path": "26"
+    },
+    "418": {
+      "branch": 12,
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        843,
+        892
+      ],
+      "op": "JUMPDEST",
+      "path": "26"
+    },
+    "419": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        835,
+        922
+      ],
+      "op": "PUSH2",
+      "path": "26",
+      "value": "0x1EE"
+    },
+    "422": {
+      "branch": 12,
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        835,
+        922
+      ],
+      "op": "JUMPI",
+      "path": "26"
+    },
+    "423": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        835,
+        922
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x40"
+    },
+    "425": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        835,
+        922
+      ],
+      "op": "MLOAD",
+      "path": "26"
+    },
+    "426": {
+      "op": "PUSH3",
+      "value": "0x461BCD"
+    },
+    "430": {
+      "op": "PUSH1",
+      "value": "0xE5"
+    },
+    "432": {
+      "op": "SHL"
+    },
+    "433": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        835,
+        922
+      ],
+      "op": "DUP2",
+      "path": "26"
+    },
+    "434": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        835,
+        922
+      ],
+      "op": "MSTORE",
+      "path": "26"
+    },
+    "435": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "437": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        835,
+        922
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x4"
+    },
+    "439": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        835,
+        922
+      ],
+      "op": "DUP3",
+      "path": "26"
+    },
+    "440": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        835,
+        922
+      ],
+      "op": "ADD",
+      "path": "26"
+    },
+    "441": {
+      "op": "MSTORE"
+    },
+    "442": {
+      "op": "PUSH1",
+      "value": "0x19"
+    },
+    "444": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "446": {
+      "op": "DUP3"
+    },
+    "447": {
+      "op": "ADD"
+    },
+    "448": {
+      "op": "MSTORE"
+    },
+    "449": {
+      "op": "PUSH32",
+      "value": "0x5472616E73666572206F6620746F6B656E73206661696C656400000000000000"
+    },
+    "482": {
+      "op": "PUSH1",
+      "value": "0x44"
+    },
+    "484": {
+      "op": "DUP3"
+    },
+    "485": {
+      "op": "ADD"
+    },
+    "486": {
+      "op": "MSTORE"
+    },
+    "487": {
+      "op": "PUSH1",
+      "value": "0x64"
+    },
+    "489": {
+      "op": "ADD"
+    },
+    "490": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        835,
+        922
+      ],
+      "op": "PUSH2",
+      "path": "26",
+      "value": "0x128"
+    },
+    "493": {
+      "op": "JUMP"
+    },
+    "494": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        835,
+        922
+      ],
+      "op": "JUMPDEST",
+      "path": "26"
+    },
+    "495": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        649,
+        929
+      ],
+      "op": "POP",
+      "path": "26"
+    },
+    "496": {
+      "fn": "FlashLoanUser.getTokens",
+      "offset": [
+        649,
+        929
+      ],
+      "op": "POP",
+      "path": "26"
+    },
+    "497": {
+      "fn": "FlashLoanUser.getTokens",
+      "jump": "o",
+      "offset": [
+        649,
+        929
+      ],
+      "op": "JUMP",
+      "path": "26"
+    },
+    "498": {
+      "fn": "Ownable.renounceOwnership",
+      "offset": [
+        1831,
+        1932
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "499": {
+      "offset": [
+        1094,
+        1107
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x1FA"
+    },
+    "502": {
+      "offset": [
+        1094,
+        1105
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x304"
+    },
+    "505": {
+      "jump": "i",
+      "offset": [
+        1094,
+        1107
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "506": {
+      "fn": "Ownable.renounceOwnership",
+      "offset": [
+        1094,
+        1107
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "507": {
+      "fn": "Ownable.renounceOwnership",
+      "offset": [
+        1895,
+        1925
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "statement": 3,
+      "value": "0x204"
+    },
+    "510": {
+      "fn": "Ownable.renounceOwnership",
+      "offset": [
+        1922,
+        1923
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "512": {
+      "fn": "Ownable.renounceOwnership",
+      "offset": [
+        1895,
+        1913
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x35E"
+    },
+    "515": {
+      "fn": "Ownable.renounceOwnership",
+      "jump": "i",
+      "offset": [
+        1895,
+        1925
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "516": {
+      "fn": "Ownable.renounceOwnership",
+      "offset": [
+        1895,
+        1925
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "517": {
+      "fn": "Ownable.renounceOwnership",
+      "jump": "o",
+      "offset": [
+        1831,
+        1932
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "518": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        935,
+        1035
+      ],
+      "op": "JUMPDEST",
+      "path": "26"
+    },
+    "519": {
+      "offset": [
+        1094,
+        1107
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x20E"
+    },
+    "522": {
+      "offset": [
+        1094,
+        1105
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x304"
+    },
+    "525": {
+      "jump": "i",
+      "offset": [
+        1094,
+        1107
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "526": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1094,
+        1107
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "527": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "statement": 4,
+      "value": "0x40"
+    },
+    "529": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "MLOAD",
+      "path": "26"
+    },
+    "530": {
+      "op": "PUSH4",
+      "value": "0x9AB603B9"
+    },
+    "535": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "537": {
+      "op": "SHL"
+    },
+    "538": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "DUP2",
+      "path": "26"
+    },
+    "539": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "MSTORE",
+      "path": "26"
+    },
+    "540": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x4"
+    },
+    "542": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "DUP2",
+      "path": "26"
+    },
+    "543": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "ADD",
+      "path": "26"
+    },
+    "544": {
+      "op": "DUP3"
+    },
+    "545": {
+      "op": "SWAP1"
+    },
+    "546": {
+      "op": "MSTORE"
+    },
+    "547": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1010
+      ],
+      "op": "PUSH32",
+      "path": "26",
+      "value": "0x0"
+    },
+    "580": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "582": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "584": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "586": {
+      "op": "SHL"
+    },
+    "587": {
+      "op": "SUB"
+    },
+    "588": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1020
+      ],
+      "op": "AND",
+      "path": "26"
+    },
+    "589": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1020
+      ],
+      "op": "SWAP1",
+      "path": "26"
+    },
+    "590": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1020
+      ],
+      "op": "PUSH4",
+      "path": "26",
+      "value": "0x9AB603B9"
+    },
+    "595": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1020
+      ],
+      "op": "SWAP1",
+      "path": "26"
+    },
+    "596": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "598": {
+      "op": "ADD"
+    },
+    "599": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x0"
+    },
+    "601": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x40"
+    },
+    "603": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "MLOAD",
+      "path": "26"
+    },
+    "604": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "DUP1",
+      "path": "26"
+    },
+    "605": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "DUP4",
+      "path": "26"
+    },
+    "606": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "SUB",
+      "path": "26"
+    },
+    "607": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "DUP2",
+      "path": "26"
+    },
+    "608": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x0"
+    },
+    "610": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "DUP8",
+      "path": "26"
+    },
+    "611": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "DUP1",
+      "path": "26"
+    },
+    "612": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "EXTCODESIZE",
+      "path": "26"
+    },
+    "613": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "ISZERO",
+      "path": "26"
+    },
+    "614": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "DUP1",
+      "path": "26"
+    },
+    "615": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "ISZERO",
+      "path": "26"
+    },
+    "616": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "PUSH2",
+      "path": "26",
+      "value": "0x270"
+    },
+    "619": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "JUMPI",
+      "path": "26"
+    },
+    "620": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x0"
+    },
+    "622": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "DUP1",
+      "path": "26"
+    },
+    "623": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "REVERT",
+      "path": "26"
+    },
+    "624": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "JUMPDEST",
+      "path": "26"
+    },
+    "625": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "POP",
+      "path": "26"
+    },
+    "626": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "GAS",
+      "path": "26"
+    },
+    "627": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "CALL",
+      "path": "26"
+    },
+    "628": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "ISZERO",
+      "path": "26"
+    },
+    "629": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "DUP1",
+      "path": "26"
+    },
+    "630": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "ISZERO",
+      "path": "26"
+    },
+    "631": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "PUSH2",
+      "path": "26",
+      "value": "0x284"
+    },
+    "634": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "JUMPI",
+      "path": "26"
+    },
+    "635": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "26"
+    },
+    "636": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x0"
+    },
+    "638": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "DUP1",
+      "path": "26"
+    },
+    "639": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "RETURNDATACOPY",
+      "path": "26"
+    },
+    "640": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "26"
+    },
+    "641": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x0"
+    },
+    "643": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "REVERT",
+      "path": "26"
+    },
+    "644": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "JUMPDEST",
+      "path": "26"
+    },
+    "645": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "POP",
+      "path": "26"
+    },
+    "646": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "POP",
+      "path": "26"
+    },
+    "647": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "POP",
+      "path": "26"
+    },
+    "648": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        1006,
+        1028
+      ],
+      "op": "POP",
+      "path": "26"
+    },
+    "649": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "offset": [
+        935,
+        1035
+      ],
+      "op": "POP",
+      "path": "26"
+    },
+    "650": {
+      "fn": "FlashLoanUser.requestFlashLoan",
+      "jump": "o",
+      "offset": [
+        935,
+        1035
+      ],
+      "op": "JUMP",
+      "path": "26"
+    },
+    "651": {
+      "fn": "Ownable.transferOwnership",
+      "offset": [
+        2081,
+        2279
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "652": {
+      "offset": [
+        1094,
+        1107
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x293"
+    },
+    "655": {
+      "offset": [
+        1094,
+        1105
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x304"
+    },
+    "658": {
+      "jump": "i",
+      "offset": [
+        1094,
+        1107
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "659": {
+      "fn": "Ownable.transferOwnership",
+      "offset": [
+        1094,
+        1107
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "660": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "662": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "664": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "666": {
+      "op": "SHL"
+    },
+    "667": {
+      "op": "SUB"
+    },
+    "668": {
+      "fn": "Ownable.transferOwnership",
+      "offset": [
+        2169,
+        2191
+      ],
+      "op": "DUP2",
+      "path": "0",
+      "statement": 5
+    },
+    "669": {
+      "branch": 13,
+      "fn": "Ownable.transferOwnership",
+      "offset": [
+        2169,
+        2191
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "670": {
+      "fn": "Ownable.transferOwnership",
+      "offset": [
+        2161,
+        2234
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x2F8"
+    },
+    "673": {
+      "branch": 13,
+      "fn": "Ownable.transferOwnership",
+      "offset": [
+        2161,
+        2234
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "674": {
+      "fn": "Ownable.transferOwnership",
+      "offset": [
+        2161,
+        2234
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "676": {
+      "fn": "Ownable.transferOwnership",
+      "offset": [
+        2161,
+        2234
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "677": {
+      "op": "PUSH3",
+      "value": "0x461BCD"
+    },
+    "681": {
+      "op": "PUSH1",
+      "value": "0xE5"
+    },
+    "683": {
+      "op": "SHL"
+    },
+    "684": {
+      "fn": "Ownable.transferOwnership",
+      "offset": [
+        2161,
+        2234
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "685": {
+      "fn": "Ownable.transferOwnership",
+      "offset": [
+        2161,
+        2234
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "686": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "688": {
+      "fn": "Ownable.transferOwnership",
+      "offset": [
+        2161,
+        2234
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "690": {
+      "fn": "Ownable.transferOwnership",
+      "offset": [
+        2161,
+        2234
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "691": {
+      "fn": "Ownable.transferOwnership",
+      "offset": [
+        2161,
+        2234
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "692": {
+      "op": "MSTORE"
+    },
+    "693": {
+      "op": "PUSH1",
+      "value": "0x26"
+    },
+    "695": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "697": {
+      "op": "DUP3"
+    },
+    "698": {
+      "op": "ADD"
+    },
+    "699": {
+      "op": "MSTORE"
+    },
+    "700": {
+      "op": "PUSH32",
+      "value": "0x4F776E61626C653A206E6577206F776E657220697320746865207A65726F2061"
+    },
+    "733": {
+      "op": "PUSH1",
+      "value": "0x44"
+    },
+    "735": {
+      "op": "DUP3"
+    },
+    "736": {
+      "op": "ADD"
+    },
+    "737": {
+      "op": "MSTORE"
+    },
+    "738": {
+      "op": "PUSH6",
+      "value": "0x646472657373"
+    },
+    "745": {
+      "op": "PUSH1",
+      "value": "0xD0"
+    },
+    "747": {
+      "op": "SHL"
+    },
+    "748": {
+      "op": "PUSH1",
+      "value": "0x64"
+    },
+    "750": {
+      "op": "DUP3"
+    },
+    "751": {
+      "op": "ADD"
+    },
+    "752": {
+      "op": "MSTORE"
+    },
+    "753": {
+      "op": "PUSH1",
+      "value": "0x84"
+    },
+    "755": {
+      "op": "ADD"
+    },
+    "756": {
+      "fn": "Ownable.transferOwnership",
+      "offset": [
+        2161,
+        2234
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x128"
+    },
+    "759": {
+      "op": "JUMP"
+    },
+    "760": {
+      "fn": "Ownable.transferOwnership",
+      "offset": [
+        2161,
+        2234
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "761": {
+      "fn": "Ownable.transferOwnership",
+      "offset": [
+        2244,
+        2272
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "statement": 6,
+      "value": "0x301"
+    },
+    "764": {
+      "fn": "Ownable.transferOwnership",
+      "offset": [
+        2263,
+        2271
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "765": {
+      "fn": "Ownable.transferOwnership",
+      "offset": [
+        2244,
+        2262
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x35E"
+    },
+    "768": {
+      "fn": "Ownable.transferOwnership",
+      "jump": "i",
+      "offset": [
+        2244,
+        2272
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "769": {
+      "fn": "Ownable.transferOwnership",
+      "offset": [
+        2244,
+        2272
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "770": {
+      "fn": "Ownable.transferOwnership",
+      "offset": [
+        2081,
+        2279
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "771": {
+      "fn": "Ownable.transferOwnership",
+      "jump": "o",
+      "offset": [
+        2081,
+        2279
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "772": {
+      "fn": "Ownable._checkOwner",
+      "offset": [
+        1359,
+        1489
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "773": {
+      "fn": "Ownable.owner",
+      "offset": [
+        1247,
+        1254
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "775": {
+      "fn": "Ownable.owner",
+      "offset": [
+        1273,
+        1279
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "776": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "778": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "780": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "782": {
+      "op": "SHL"
+    },
+    "783": {
+      "op": "SUB"
+    },
+    "784": {
+      "fn": "Ownable.owner",
+      "offset": [
+        1273,
+        1279
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "785": {
+      "fn": "Context._msgSender",
+      "offset": [
+        719,
+        729
+      ],
+      "op": "CALLER",
+      "path": "13",
+      "statement": 7
+    },
+    "786": {
+      "branch": 14,
+      "fn": "Ownable._checkOwner",
+      "offset": [
+        1422,
+        1445
+      ],
+      "op": "EQ",
+      "path": "0",
+      "statement": 8
+    },
+    "787": {
+      "fn": "Ownable._checkOwner",
+      "offset": [
+        1414,
+        1482
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x204"
+    },
+    "790": {
+      "branch": 14,
+      "fn": "Ownable._checkOwner",
+      "offset": [
+        1414,
+        1482
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "791": {
+      "fn": "Ownable._checkOwner",
+      "offset": [
+        1414,
+        1482
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "793": {
+      "fn": "Ownable._checkOwner",
+      "offset": [
+        1414,
+        1482
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "794": {
+      "op": "PUSH3",
+      "value": "0x461BCD"
+    },
+    "798": {
+      "op": "PUSH1",
+      "value": "0xE5"
+    },
+    "800": {
+      "op": "SHL"
+    },
+    "801": {
+      "fn": "Ownable._checkOwner",
+      "offset": [
+        1414,
+        1482
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "802": {
+      "fn": "Ownable._checkOwner",
+      "offset": [
+        1414,
+        1482
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "803": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "805": {
+      "fn": "Ownable._checkOwner",
+      "offset": [
+        1414,
+        1482
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "807": {
+      "fn": "Ownable._checkOwner",
+      "offset": [
+        1414,
+        1482
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "808": {
+      "fn": "Ownable._checkOwner",
+      "offset": [
+        1414,
+        1482
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "809": {
+      "op": "DUP2"
+    },
+    "810": {
+      "op": "SWAP1"
+    },
+    "811": {
+      "op": "MSTORE"
+    },
+    "812": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "814": {
+      "op": "DUP3"
+    },
+    "815": {
+      "op": "ADD"
+    },
+    "816": {
+      "op": "MSTORE"
+    },
+    "817": {
+      "op": "PUSH32",
+      "value": "0x4F776E61626C653A2063616C6C6572206973206E6F7420746865206F776E6572"
+    },
+    "850": {
+      "op": "PUSH1",
+      "value": "0x44"
+    },
+    "852": {
+      "op": "DUP3"
+    },
+    "853": {
+      "op": "ADD"
+    },
+    "854": {
+      "op": "MSTORE"
+    },
+    "855": {
+      "op": "PUSH1",
+      "value": "0x64"
+    },
+    "857": {
+      "op": "ADD"
+    },
+    "858": {
+      "fn": "Ownable._checkOwner",
+      "offset": [
+        1414,
+        1482
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x128"
+    },
+    "861": {
+      "op": "JUMP"
+    },
+    "862": {
+      "fn": "Ownable._transferOwnership",
+      "offset": [
+        2433,
+        2620
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "863": {
+      "fn": "Ownable._transferOwnership",
+      "offset": [
+        2506,
+        2522
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "865": {
+      "fn": "Ownable._transferOwnership",
+      "offset": [
+        2525,
+        2531
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "866": {
+      "fn": "Ownable._transferOwnership",
+      "offset": [
+        2525,
+        2531
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "867": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "869": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "871": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "873": {
+      "op": "SHL"
+    },
+    "874": {
+      "op": "SUB"
+    },
+    "875": {
+      "fn": "Ownable._transferOwnership",
+      "offset": [
+        2541,
+        2558
+      ],
+      "op": "DUP4",
+      "path": "0",
+      "statement": 9
+    },
+    "876": {
+      "fn": "Ownable._transferOwnership",
+      "offset": [
+        2541,
+        2558
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "877": {
+      "fn": "Ownable._transferOwnership",
+      "offset": [
+        2541,
+        2558
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "878": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "880": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "882": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "884": {
+      "op": "SHL"
+    },
+    "885": {
+      "op": "SUB"
+    },
+    "886": {
+      "op": "NOT"
+    },
+    "887": {
+      "fn": "Ownable._transferOwnership",
+      "offset": [
+        2541,
+        2558
+      ],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "888": {
+      "fn": "Ownable._transferOwnership",
+      "offset": [
+        2541,
+        2558
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "889": {
+      "fn": "Ownable._transferOwnership",
+      "offset": [
+        2541,
+        2558
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "890": {
+      "fn": "Ownable._transferOwnership",
+      "offset": [
+        2541,
+        2558
+      ],
+      "op": "OR",
+      "path": "0"
+    },
+    "891": {
+      "fn": "Ownable._transferOwnership",
+      "offset": [
+        2541,
+        2558
+      ],
+      "op": "DUP5",
+      "path": "0"
+    },
+    "892": {
+      "fn": "Ownable._transferOwnership",
+      "offset": [
+        2541,
+        2558
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "893": {
+      "fn": "Ownable._transferOwnership",
+      "offset": [
+        2573,
+        2613
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 10,
+      "value": "0x40"
+    },
+    "895": {
+      "fn": "Ownable._transferOwnership",
+      "offset": [
+        2573,
+        2613
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "896": {
+      "fn": "Ownable._transferOwnership",
+      "offset": [
+        2525,
+        2531
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "897": {
+      "fn": "Ownable._transferOwnership",
+      "offset": [
+        2525,
+        2531
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "898": {
+      "fn": "Ownable._transferOwnership",
+      "offset": [
+        2525,
+        2531
+      ],
+      "op": "SWAP3",
+      "path": "0"
+    },
+    "899": {
+      "fn": "Ownable._transferOwnership",
+      "offset": [
+        2525,
+        2531
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "900": {
+      "fn": "Ownable._transferOwnership",
+      "offset": [
+        2525,
+        2531
+      ],
+      "op": "SWAP3",
+      "path": "0"
+    },
+    "901": {
+      "fn": "Ownable._transferOwnership",
+      "offset": [
+        2525,
+        2531
+      ],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "902": {
+      "fn": "Ownable._transferOwnership",
+      "offset": [
+        2525,
+        2531
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "903": {
+      "fn": "Ownable._transferOwnership",
+      "offset": [
+        2573,
+        2613
+      ],
+      "op": "PUSH32",
+      "path": "0",
+      "value": "0x8BE0079C531659141344CD1FD0A4F28419497F9722A3DAAFE3B4186F6B6457E0"
+    },
+    "936": {
+      "fn": "Ownable._transferOwnership",
+      "offset": [
+        2573,
+        2613
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "937": {
+      "fn": "Ownable._transferOwnership",
+      "offset": [
+        2506,
+        2522
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "938": {
+      "fn": "Ownable._transferOwnership",
+      "offset": [
+        2573,
+        2613
+      ],
+      "op": "LOG3",
+      "path": "0"
+    },
+    "939": {
+      "fn": "Ownable._transferOwnership",
+      "offset": [
+        2496,
+        2620
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "940": {
+      "fn": "Ownable._transferOwnership",
+      "offset": [
+        2433,
+        2620
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "941": {
+      "fn": "Ownable._transferOwnership",
+      "jump": "o",
+      "offset": [
+        2433,
+        2620
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "942": {
+      "op": "JUMPDEST"
+    },
+    "943": {
+      "op": "DUP1"
+    },
+    "944": {
+      "op": "CALLDATALOAD"
+    },
+    "945": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "947": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "949": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "951": {
+      "op": "SHL"
+    },
+    "952": {
+      "op": "SUB"
+    },
+    "953": {
+      "op": "DUP2"
+    },
+    "954": {
+      "op": "AND"
+    },
+    "955": {
+      "op": "DUP2"
+    },
+    "956": {
+      "op": "EQ"
+    },
+    "957": {
+      "op": "PUSH2",
+      "value": "0x3C5"
+    },
+    "960": {
+      "op": "JUMPI"
+    },
+    "961": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "963": {
+      "op": "DUP1"
+    },
+    "964": {
+      "op": "REVERT"
+    },
+    "965": {
+      "op": "JUMPDEST"
+    },
+    "966": {
+      "op": "SWAP2"
+    },
+    "967": {
+      "op": "SWAP1"
+    },
+    "968": {
+      "op": "POP"
+    },
+    "969": {
+      "jump": "o",
+      "op": "JUMP"
+    },
+    "970": {
+      "op": "JUMPDEST"
+    },
+    "971": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "973": {
+      "op": "DUP1"
+    },
+    "974": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "976": {
+      "op": "DUP4"
+    },
+    "977": {
+      "op": "DUP6"
+    },
+    "978": {
+      "op": "SUB"
+    },
+    "979": {
+      "op": "SLT"
+    },
+    "980": {
+      "op": "ISZERO"
+    },
+    "981": {
+      "op": "PUSH2",
+      "value": "0x3DD"
+    },
+    "984": {
+      "op": "JUMPI"
+    },
+    "985": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "987": {
+      "op": "DUP1"
+    },
+    "988": {
+      "op": "REVERT"
+    },
+    "989": {
+      "op": "JUMPDEST"
+    },
+    "990": {
+      "op": "PUSH2",
+      "value": "0x3E6"
+    },
+    "993": {
+      "op": "DUP4"
+    },
+    "994": {
+      "op": "PUSH2",
+      "value": "0x3AE"
+    },
+    "997": {
+      "jump": "i",
+      "op": "JUMP"
+    },
+    "998": {
+      "op": "JUMPDEST"
+    },
+    "999": {
+      "op": "SWAP5"
+    },
+    "1000": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "1002": {
+      "op": "SWAP4"
+    },
+    "1003": {
+      "op": "SWAP1"
+    },
+    "1004": {
+      "op": "SWAP4"
+    },
+    "1005": {
+      "op": "ADD"
+    },
+    "1006": {
+      "op": "CALLDATALOAD"
+    },
+    "1007": {
+      "op": "SWAP4"
+    },
+    "1008": {
+      "op": "POP"
+    },
+    "1009": {
+      "op": "POP"
+    },
+    "1010": {
+      "op": "POP"
+    },
+    "1011": {
+      "jump": "o",
+      "op": "JUMP"
+    },
+    "1012": {
+      "op": "JUMPDEST"
+    },
+    "1013": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1015": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "1017": {
+      "op": "DUP3"
+    },
+    "1018": {
+      "op": "DUP5"
+    },
+    "1019": {
+      "op": "SUB"
+    },
+    "1020": {
+      "op": "SLT"
+    },
+    "1021": {
+      "op": "ISZERO"
+    },
+    "1022": {
+      "op": "PUSH2",
+      "value": "0x406"
+    },
+    "1025": {
+      "op": "JUMPI"
+    },
+    "1026": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1028": {
+      "op": "DUP1"
+    },
+    "1029": {
+      "op": "REVERT"
+    },
+    "1030": {
+      "op": "JUMPDEST"
+    },
+    "1031": {
+      "op": "POP"
+    },
+    "1032": {
+      "op": "CALLDATALOAD"
+    },
+    "1033": {
+      "op": "SWAP2"
+    },
+    "1034": {
+      "op": "SWAP1"
+    },
+    "1035": {
+      "op": "POP"
+    },
+    "1036": {
+      "jump": "o",
+      "op": "JUMP"
+    },
+    "1037": {
+      "op": "JUMPDEST"
+    },
+    "1038": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1040": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "1042": {
+      "op": "DUP3"
+    },
+    "1043": {
+      "op": "DUP5"
+    },
+    "1044": {
+      "op": "SUB"
+    },
+    "1045": {
+      "op": "SLT"
+    },
+    "1046": {
+      "op": "ISZERO"
+    },
+    "1047": {
+      "op": "PUSH2",
+      "value": "0x41F"
+    },
+    "1050": {
+      "op": "JUMPI"
+    },
+    "1051": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1053": {
+      "op": "DUP1"
+    },
+    "1054": {
+      "op": "REVERT"
+    },
+    "1055": {
+      "op": "JUMPDEST"
+    },
+    "1056": {
+      "op": "PUSH2",
+      "value": "0x428"
+    },
+    "1059": {
+      "op": "DUP3"
+    },
+    "1060": {
+      "op": "PUSH2",
+      "value": "0x3AE"
+    },
+    "1063": {
+      "jump": "i",
+      "op": "JUMP"
+    },
+    "1064": {
+      "op": "JUMPDEST"
+    },
+    "1065": {
+      "op": "SWAP4"
+    },
+    "1066": {
+      "op": "SWAP3"
+    },
+    "1067": {
+      "op": "POP"
+    },
+    "1068": {
+      "op": "POP"
+    },
+    "1069": {
+      "op": "POP"
+    },
+    "1070": {
+      "jump": "o",
+      "op": "JUMP"
+    },
+    "1071": {
+      "op": "JUMPDEST"
+    },
+    "1072": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1074": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "1076": {
+      "op": "DUP3"
+    },
+    "1077": {
+      "op": "DUP5"
+    },
+    "1078": {
+      "op": "SUB"
+    },
+    "1079": {
+      "op": "SLT"
+    },
+    "1080": {
+      "op": "ISZERO"
+    },
+    "1081": {
+      "op": "PUSH2",
+      "value": "0x441"
+    },
+    "1084": {
+      "op": "JUMPI"
+    },
+    "1085": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1087": {
+      "op": "DUP1"
+    },
+    "1088": {
+      "op": "REVERT"
+    },
+    "1089": {
+      "op": "JUMPDEST"
+    },
+    "1090": {
+      "op": "DUP2"
+    },
+    "1091": {
+      "op": "MLOAD"
+    },
+    "1092": {
+      "op": "DUP1"
+    },
+    "1093": {
+      "op": "ISZERO"
+    },
+    "1094": {
+      "op": "ISZERO"
+    },
+    "1095": {
+      "op": "DUP2"
+    },
+    "1096": {
+      "op": "EQ"
+    },
+    "1097": {
+      "op": "PUSH2",
+      "value": "0x428"
+    },
+    "1100": {
+      "op": "JUMPI"
+    },
+    "1101": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1103": {
+      "op": "DUP1"
+    },
+    "1104": {
+      "op": "REVERT"
+    }
+  },
+  "sha1": "27cd69ceca6a0ed75401a9ff8dae754414bfcf9a",
+  "source": "// SCH Course Copyright Policy (C): DO-NOT-SHARE-WITH-ANYONE\n// https://smartcontractshacking.com/#copyright-policy\npragma solidity ^0.8.13;\n\nimport \"@openzeppelin/contracts/token/ERC20/IERC20.sol\";\nimport \"@openzeppelin/contracts/access/Ownable.sol\";\n\ninterface IShibaPool {\n    function flashLoan(uint256 borrowAmount) external;\n}\n\n/**\n * @title FlashLoanUser\n * @author JohnnyTime (https://smartcontractshacking.com)\n */\ncontract FlashLoanUser is Ownable {\n\n    IShibaPool private immutable pool;\n\n    constructor(address poolAddress) {\n        pool = IShibaPool(poolAddress);\n    }\n\n    // Pool will call this function during the flash loan\n    function getTokens(address tokenAddress, uint256 amount) external {\n        require(msg.sender == address(pool), \"Sender must be pool\");\n        // Return all tokens to the pool\n        require(IERC20(tokenAddress).transfer(msg.sender, amount), \"Transfer of tokens failed\");\n    }\n\n    function requestFlashLoan(uint256 amount) external onlyOwner {\n        pool.flashLoan(amount);\n    }\n}",
+  "sourceMap": "424:613:26:-:0;;;505:80;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;936:32:0;719:10:13;936:18:0;:32::i;:::-;-1:-1:-1;;;;;548:30:26;;;424:613;;2433:187:0;2506:16;2525:6;;-1:-1:-1;;;;;2541:17:0;;;-1:-1:-1;;;;;;2541:17:0;;;;;;2573:40;;2525:6;;;;;;;2573:40;;2506:16;2573:40;2496:124;2433:187;:::o;14:290:63:-;84:6;137:2;125:9;116:7;112:23;108:32;105:52;;;153:1;150;143:12;105:52;179:16;;-1:-1:-1;;;;;224:31:63;;214:42;;204:70;;270:1;267;260:12;204:70;293:5;14:290;-1:-1:-1;;;14:290:63:o;:::-;424:613:26;;;;;;;;;;;;;;;;;",
+  "sourcePath": "contracts/dos-3/FlashLoanUser.sol",
+  "type": "contract"
+}

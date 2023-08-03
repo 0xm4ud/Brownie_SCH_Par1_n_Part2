@@ -1,0 +1,893 @@
+{
+  "contracts": {
+    "AaveUser": "d6fe47839c469ad07ec1af2ed94021208ee5409a",
+    "Address": "3b4158955f564edb18bd7a8ffdb49859c904f0b7",
+    "AdvancedVault": "d1b826b3bd9de15dcbe0e736f46bc5f0f3e84b15",
+    "AttackContract": "292e67e7070264b78491d30de712d29ef6176f31",
+    "AttackContract2": "c53d50f5629fe4daf91b1216d6ee9d8436fafd80",
+    "AttackContractSolvedAdvanced": "9af01ab8af028a2657780d8f13f7a71c824f6950",
+    "AttackDAO": "02e09db11db6c2722f4c076747804c808df254be",
+    "AttackEscrow": "644e96f4f5679819a6fbea953ecbf153276b1d18",
+    "AttackLendly": "c4834f5120242e6dd28aa6834c75ad85cfb3cf89",
+    "Attacky": "0ecdaa99d734d06e31892226ae5db0c19b667f07",
+    "Auction": "eaa2bd3725a9230733e3dd8c9a43697a60fa4f57",
+    "AuctionAttacker": "893821ba0307d0dba17c2c0d6c87355791c5f01d",
+    "Blacklistable": "597191c4ada3afa6252026be19d2ec4b8dd637ec",
+    "BlockSafe": "5473044bfc674bb8ac1e070a83b97b1d357032e8",
+    "BlockSafeDestructor": "86d823aa634361d2c2e57c45f6db5eaed7117ad9",
+    "BlockSafeFactory": "38208b92289f8b1ac4032266697cfaa7e8a12f16",
+    "CallHelpers": "1ce946f6a4eaa185320328620ccf999b9e86db7c",
+    "CallHelpers2": "1ce946f6a4eaa185320328620ccf999b9e86db7c",
+    "Chocolate": "1b54291310db5557af774f620be91ae8e3e60f84",
+    "Chocolate2": "1b54291310db5557af774f620be91ae8e3e60f84",
+    "CompoundUser": "8071cef17eae9286219078e4080c808b5472843a",
+    "CrypticRaffle": "3e78acd22ea33926dd9ed875676a7bbf46976c58",
+    "CryptoKeeper": "bda3920fd281e1518da541a579907a6cc93823d8",
+    "CryptoKeeperFactory": "2d6a353d081a23491b26c0dfd4cd44e4d4555fbb",
+    "DAI": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+    "DAOToken": "0b7019ba086987915d6b02bb1a5aed5a7698e753",
+    "DonationMaster": "5c24d8168730e1a2366f673f6866990b5555a3f9",
+    "DummyERC20": "f27bdaf1fa4e1bb891ef35a106ce7fc722a53b68",
+    "DummyERC721": "9db77c9485a69d98181d094b918ff5208bff889d",
+    "ECRecover": "3b4158955f564edb18bd7a8ffdb49859c904f0b7",
+    "EIP712": "3b4158955f564edb18bd7a8ffdb49859c904f0b7",
+    "EIP712Domain": "f3ab983c312fd09e6fad4291cd30c09fea03691a",
+    "Escrow": "c4d15c6ece5d69caac067e1faf8cad8965d4ddab",
+    "EscrowNFT": "648a63decf1f103998eaf49b93a703dbf3652f2c",
+    "EscrowSecured": "4c44881c89065519c3fc022dd9acbae57939ebbb",
+    "FiatTokenV1_1": "a8fc6eb5d86735e4d7100131974fbb8f21499448",
+    "FiatTokenV2": "ebdfbc09b636e18e1114027f175ce16ab899f325",
+    "FiatTokenV2_1": "5f2eb13ea722344642c606b5b904801c40a02ee3",
+    "FindMe": "026d1eb3ac5558d790065d89597dd4b3e7771b92",
+    "FlashLoan": "728c9edb72880dbb01b387d6d4e7425e2f9c011f",
+    "FlashLoanUser": "90f1b71376dea86e8b473ec578838346c0184bf1",
+    "FlashSwap": "9543e60f46ca2877d755e71d286f3c729c6120c6",
+    "GalacticGorillas": "2bcfcc7f21fe234db1c467eccbcd2e3907dd51bd",
+    "GoldExchange": "ccb32727de85b86bb19e6bc366a03a9bae07ca30",
+    "GoldOracle": "efed3af83cdca6137f91619dae2b1bf773ceecd2",
+    "GoldToken": "4869f90d5afd3686e4049cda1f906c0a7f22fa09",
+    "Governance": "fce41df8d8628950a90514208135b7d47285f445",
+    "GreedyReceiver": "1294f5f07a9ed053b10b204683617ef93d55a1d6",
+    "LendingPool": "c5c1ea01ee29fd395a4065780fcda20800a0a947",
+    "Lendly": "85281b6d2560f812781cb58b8c7a607b40e8c93d",
+    "LibNote": "cf5a668c1470d82392d2b579b0fbfb9cd9b200fd",
+    "MultiSigSafe": "a5952beb0fb1f360a26fab90d502182166e85330",
+    "MultiSignatureWallet": "24204aa6cd49e80bfcb25ffd65e3f0f1cdc2ee6f",
+    "OpenZeppelin/openzeppelin-contracts@4.8.0/Address": "1ce946f6a4eaa185320328620ccf999b9e86db7c",
+    "OpenZeppelin/openzeppelin-contracts@4.8.0/Clones": "1ce946f6a4eaa185320328620ccf999b9e86db7c",
+    "OpenZeppelin/openzeppelin-contracts@4.8.0/ECDSA": "1ce946f6a4eaa185320328620ccf999b9e86db7c",
+    "OpenZeppelin/openzeppelin-contracts@4.8.0/ERC1155Holder": "640b273ac99f9a455551731de16bd093109b1371",
+    "OpenZeppelin/openzeppelin-contracts@4.8.0/ERC165Checker": "1ce946f6a4eaa185320328620ccf999b9e86db7c",
+    "OpenZeppelin/openzeppelin-contracts@4.8.0/ERC20": "5d7c53ac75579876ffbfb61e35f275d9402a5cc6",
+    "OpenZeppelin/openzeppelin-contracts@4.8.0/ERC721": "64b52256f625d8f39e5c462725250f4f69cb95e5",
+    "OpenZeppelin/openzeppelin-contracts@4.8.0/ERC721Holder": "091118243e7206cae078dea536db616dcb4e45d4",
+    "OpenZeppelin/openzeppelin-contracts@4.8.0/Math": "1ce946f6a4eaa185320328620ccf999b9e86db7c",
+    "OpenZeppelin/openzeppelin-contracts@4.8.0/SafeERC20": "1ce946f6a4eaa185320328620ccf999b9e86db7c",
+    "OpenZeppelin/openzeppelin-contracts@4.8.0/Strings": "1ce946f6a4eaa185320328620ccf999b9e86db7c",
+    "OptimizerStrategy": "468165255a30c9a8abf15b1ca0bd11c5a21980c8",
+    "OptimizerStrategyManager": "581ef79c525832ca217bd84ab46c13022ec155ee",
+    "OptimizerVault": "d49fb53ae3c2115c88f5f6708e652e75003ed81b",
+    "Ownable": "6f53d4443ef7457cbcf5c91c27f0150273728044",
+    "Ownablez": "853b387c20ec819ee799537a710412d13a0b34b0",
+    "Pausable": "982e0aeeedc1a93d079aafe1708308fc4132ddbc",
+    "Pausablez": "14cfe2b187511e956de4426427acb0dbfc4c36ea",
+    "Pool": "232bc5946a2d055a645fe4096bb20367c0cb6046",
+    "Pool2": "1f42b0696ea60b8d04e2ac97d56f68390ce870c1",
+    "RainbowAllianceToken": "1ec40df2ba9aea0fed2fbe47436bc8bc4d765a8d",
+    "RealtySale": "e0704458184e68e69916e374f3f31bfd03fec290",
+    "RealtyToken": "cfc8ba124f8eb70b286dca7e4af96a48dcdbd525",
+    "Receiver": "1b134f2ffa06c389be744383009e3e3e68215109",
+    "RedHawksVIP": "bf327910e15c623d2394045185f8c7779f5c9279",
+    "Referrals": "8c0640c476d98afcaf7d9509b7d3754e64da99f6",
+    "RentingLibrary": "f54eeec32dcab6b9d3d661e6ec5e8c3a44fea3eb",
+    "RentingLibraryAttacker": "19b323be900a7bf363a394574bb38bb8da806249",
+    "Rescuable": "32bf6b55c1a119db7f5e04e8271de0a627ccb63e",
+    "RestrictedOwner": "925caf8c113114e08e8ed878c67606583dad2c0a",
+    "RugContract": "da12afa7d01cc852e720d82ab636685b0a60cf77",
+    "RugContractSolved": "da12afa7d01cc852e720d82ab636685b0a60cf77",
+    "SafeERC20": "3b4158955f564edb18bd7a8ffdb49859c904f0b7",
+    "SafeMath": "3b4158955f564edb18bd7a8ffdb49859c904f0b7",
+    "SafeMathz": "bf84f5dba942291289c80f271862cb515ce813ab",
+    "Sandwich": "781a49e9658109cd2eb39644f40a54cf38c8b899",
+    "SecretDoor": "2d23b37bdeaa3cf745847b544a7bc6ced3a9c2c8",
+    "SecureStore": "1482c8204c5646c9c39ed29e805b1982135443ec",
+    "ShibaPool": "53b918856f4a96d7ba54b807437b54dae84ebc3f",
+    "ShibaToken": "dcdc80b0b75fa76b2a16fa10c9cca6a6eef5a940",
+    "Sniper": "821cdddcbcabd8be9c7e747898d8328c9bff9fe5",
+    "StableSwap": "ad36728c69a1924929f4f6aa90ac7ae522fdd00b",
+    "TheGridDAO": "bd0efeda9bd3049ffe2b89adcd90894a126b6104",
+    "TheGridTreasury": "38201c77ba724581f35998bea7c691eec2d8d11a",
+    "Token": "7d7e8d4204864f8cc979efca07aea6acdc105b97",
+    "TokenSale": "dafdd4fe79d175d341b358c32b0464976881d7f5",
+    "Treasury": "3d72cb902dee2e547e4228f2ac01d87d1e7e4728",
+    "TwoStepExchange": "ed5bd3e706ff5c4bd8dee5af40a5acc28bf4b5ec",
+    "USDC": "7931fb2fb76f0116f35bc0babf07d91ce6789134",
+    "UST": "59e0b6e9f075b10802a080b9c0c76bac4b19598a",
+    "UnrestrictedOwner": "67e3e6ca3b1499e0d16302d679aef242881153d4",
+    "VaultAttack": "98aed22bdae211b1ce52ceb181ba22cb64a44de0",
+    "YieldContract": "df11d8e37a85b0e548bd1197242f9ff6d81ee8be",
+    "console": "1ce946f6a4eaa185320328620ccf999b9e86db7c"
+  },
+  "tests": {
+    "tests/call-attacks-1/test.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": ".",
+      "sha1": "92efb73bc9274df83b554bbc96554403cd6028d3",
+      "txhash": [
+        "f0a952a146487e65c97c0ca9f4c5c1cecf22598d"
+      ]
+    },
+    "tests/call-attacks-2/test.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": ".",
+      "sha1": "fb92a0a7bfe7b3fd37ccc56c264e601fe3d80989",
+      "txhash": []
+    },
+    "tests/dao-attack-1/test.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": "..F",
+      "sha1": "c20d7ac2f4e86abf7076cf52dc2cc8a9c95386ef",
+      "txhash": [
+        "1b823d51d4f426346210807a60db2f491e91e72b",
+        "272baf8104800018af3476d897ec977967527e96",
+        "a35f657229f3293494e603aeba8c4f48e7ccdf9c",
+        "bdb273db438b3d867f28209571ddec8bbdbd89db"
+      ]
+    },
+    "tests/dao-attack-2/test.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": ".",
+      "sha1": "dbdd5a23ed648b9e5e2d123cfe06e9c8639805b8",
+      "txhash": [
+        "07d1be9df664a43daaa19910defcd77fd42269b1",
+        "4a824323c5cb0f72fb4d758fc2f982aa1fddb79c",
+        "9a90a43af3afe1f61cb8b732eb1e9cf16c581fc3",
+        "bdd9bb51d60e00fb00ef22805c37f2ecbe281929",
+        "d482e9d5e00d7dbb7ff0d5e39811b589f0822f28"
+      ]
+    },
+    "tests/dao-attack-3/test.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": ".",
+      "sha1": "c7578201c2e5d6d3d6531c06b81ab82ee935a73d",
+      "txhash": []
+    },
+    "tests/dex-1/test.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": "...",
+      "sha1": "9ff26a3b0133a2fbd11005b9703c1a811a3a5a61",
+      "txhash": []
+    },
+    "tests/dex-1/test2.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": "...",
+      "sha1": "708d882c6e5c78ebdb5e94755d3a9e394caefc46",
+      "txhash": []
+    },
+    "tests/dex-2/test.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": "...",
+      "sha1": "49e9dcc819e73e9b50bd00cd0fc124a64de6c70b",
+      "txhash": []
+    },
+    "tests/dos-1/test.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": ".",
+      "sha1": "f81d31c4380ad5ed524c7cec3008bfd4aaa58db7",
+      "txhash": []
+    },
+    "tests/dos-2/test.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": ".",
+      "sha1": "dd42682ccec5aaead4d69566eb1c3c442024bfeb",
+      "txhash": [
+        "b145f0889c585fcccd15d09fa074632c59dfb42b"
+      ]
+    },
+    "tests/dos-3/test.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": ".",
+      "sha1": "54f4da86cd276c7571c32bfb36f33dd69f7bc063",
+      "txhash": [
+        "75e8314d70ce521f8d45d7401d7496cee2ada986"
+      ]
+    },
+    "tests/dos-4/test.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": "....",
+      "sha1": "fa280c5a93a479663cf4323f74d7a7c525f61598",
+      "txhash": [
+        "0e0456528e1bc9dd99a4573aab601bb168aab4a8",
+        "286624dbd998f9f2d1a5ea7ad01b7505d5863d05",
+        "46792ccc7e840bf6d245210260524ce62c2af9e8",
+        "564a09f4c3c1b02ca1325597bf6b7b3fbdaec025",
+        "87c81218a5e1f483eb8e3bf76924fbe95d054e00",
+        "aee2ff2631c523fbd278f833f4caac9ac32d3246",
+        "f920aae22c1c4298bec97a357a4b1ac2d17b1d87"
+      ]
+    },
+    "tests/flash-loan-attacks-1/test.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": ".",
+      "sha1": "5cd6c912c92ad0afdddd0cee77816fe6b1a2ecca",
+      "txhash": []
+    },
+    "tests/flash-loan-attacks-2/test.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": ".",
+      "sha1": "957fe1d6864c36e513b4f993cb0ece9b36610c50",
+      "txhash": []
+    },
+    "tests/flash-loans-1/test.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": ".",
+      "sha1": "4bce6cee7cea8b2e4a9cd0863b759d263d3fa47b",
+      "txhash": [
+        "06cb022a0c4a9f5ca175b088257cf42acea3a5d6"
+      ]
+    },
+    "tests/flash-loans-2/test.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": "...",
+      "sha1": "3be8f3d216fc5afff8b8408b6170237b3db2dd2c",
+      "txhash": []
+    },
+    "tests/flash-loans-3/test.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": "...",
+      "sha1": "d6cd9950e57d1a19ed553567ec1eb80b4ab0a7b2",
+      "txhash": []
+    },
+    "tests/frontrunning-1/test.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": ".",
+      "sha1": "d1e6dca0908a951edd9810bffb65b6b92d66162b",
+      "txhash": []
+    },
+    "tests/frontrunning-2/test.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": ".",
+      "sha1": "f9bb6bf7ec24acb19622d04e7981e59b56ea7135",
+      "txhash": []
+    },
+    "tests/frontrunning-3/test.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": ".",
+      "sha1": "9e3dd42d46d05fe5fd67e15270a11340cd3f18da",
+      "txhash": []
+    },
+    "tests/gas-manipulation-1/test.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": ".",
+      "sha1": "d5b986b8b286d91605d51864a5d98a7a97436879",
+      "txhash": []
+    },
+    "tests/mm-1/test.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": ".....",
+      "sha1": "cee1441627dfda2077b701f5c6bc8c569a08ae28",
+      "txhash": []
+    },
+    "tests/mm-2/test.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": ".....",
+      "sha1": "cee1441627dfda2077b701f5c6bc8c569a08ae28",
+      "txhash": []
+    },
+    "tests/mm-2/test2.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": "......",
+      "sha1": "4285a0f2efa45ef9a5f0f851e93b38786eed116a",
+      "txhash": []
+    },
+    "tests/optimizer-vaults-1/test.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": ".",
+      "sha1": "0460416f26a78ea6054db19901b49e36a9f745de",
+      "txhash": []
+    },
+    "tests/optimizer-vaults-2/test.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": ".",
+      "sha1": "bd9792ae8e2d60e2e9bac7f0ebfff77b21be424b",
+      "txhash": []
+    },
+    "tests/oracle-manipulation-2/test58.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": "..",
+      "sha1": "c57243624073b5842325d06ee2b2aa882d478dfa",
+      "txhash": [
+        "c043d5d8dd5be3193ac0100af3d5d7c7cf01d50f"
+      ]
+    },
+    "tests/replay-1/test.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": ".",
+      "sha1": "721e03cb45b737b12cd4fb0de46bff8def76b171",
+      "txhash": []
+    },
+    "tests/replay-2/test.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": ".F..F",
+      "sha1": "884b1f8b426fad9fa383f18e700b9146c09ee7cf",
+      "txhash": [
+        "10ea3cb401717c9db33c4a9714c1b592c833fd2d",
+        "9df463222f794da11b9a021373b967defa1a602b"
+      ]
+    },
+    "tests/replay-3/test_FullClassSig.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": "....",
+      "sha1": "d9cbc7dcc6622c2dfe4f9afed47eda3afbc09f3b",
+      "txhash": [
+        "0d247e4feee148c80721b48290fed8894be5032f",
+        "a86045e80a7b4b2df083564da5f1b6acc330608a"
+      ]
+    },
+    "tests/sensitive-on-chain-data-2/test.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": ".",
+      "sha1": "9ab224bd7d7b90587e0f6032ff61af1420c50ff8",
+      "txhash": []
+    },
+    "tests/sensitive-on-chain-data-3/test.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": ".",
+      "sha1": "da74d0da2e2b052416bc0b83bc23cfdb52536e56",
+      "txhash": []
+    },
+    "tests/unchecked-returns-1/test.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": ".",
+      "sha1": "0b4a622ce30fda42f237a93ce73003774d74d988",
+      "txhash": [
+        "00f6bb47c377cca649932f94e0b1523c9ea7ae3c"
+      ]
+    },
+    "tests/unchecked-returns-2/test.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": "...",
+      "sha1": "d6ff12d78da84ef0d40d4bc5422bc90889b17f67",
+      "txhash": [
+        "987e959f3949e2559508fccfa8e5b39345085e6a",
+        "c044e77c1a674ef437e6dfc33a4b028a6733e9e4"
+      ]
+    },
+    "tests/unchecked-returns-3/test.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": ".",
+      "sha1": "233841651cfeb8bfd2609dbc4a55e270fba5a2e8",
+      "txhash": []
+    }
+  },
+  "tx": {
+    "00f6bb47c377cca649932f94e0b1523c9ea7ae3c": {
+      "DonationMaster": {
+        "18": [
+          [
+            3,
+            4
+          ],
+          [
+            10
+          ],
+          [
+            9
+          ]
+        ]
+      }
+    },
+    "06cb022a0c4a9f5ca175b088257cf42acea3a5d6": {
+      "GreedyReceiver": {
+        "12": [
+          [
+            0
+          ],
+          [],
+          []
+        ]
+      },
+      "Pool2": {
+        "13": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            4
+          ],
+          [
+            3
+          ]
+        ]
+      }
+    },
+    "07d1be9df664a43daaa19910defcd77fd42269b1": {},
+    "0d247e4feee148c80721b48290fed8894be5032f": {
+      "RedHawksVIP": {
+        "15": [
+          [
+            83,
+            84,
+            85,
+            86,
+            93
+          ],
+          [
+            97,
+            98
+          ],
+          [
+            102,
+            103
+          ]
+        ],
+        "52": [
+          [
+            23,
+            51,
+            52,
+            81,
+            82
+          ],
+          [
+            96
+          ],
+          [
+            95
+          ]
+        ],
+        "7": [
+          [],
+          [],
+          []
+        ]
+      }
+    },
+    "0e0456528e1bc9dd99a4573aab601bb168aab4a8": {
+      "GalacticGorillas": {
+        "28": [
+          [
+            21
+          ],
+          [
+            91
+          ],
+          []
+        ],
+        "7": [
+          [],
+          [],
+          []
+        ]
+      }
+    },
+    "10ea3cb401717c9db33c4a9714c1b592c833fd2d": {},
+    "1b823d51d4f426346210807a60db2f491e91e72b": {
+      "RainbowAllianceToken": {
+        "5": [
+          [
+            26
+          ],
+          [],
+          []
+        ]
+      }
+    },
+    "272baf8104800018af3476d897ec977967527e96": {
+      "RainbowAllianceToken": {
+        "5": [
+          [
+            26,
+            27
+          ],
+          [
+            62
+          ],
+          []
+        ]
+      }
+    },
+    "286624dbd998f9f2d1a5ea7ad01b7505d5863d05": {
+      "GalacticGorillas": {
+        "28": [
+          [
+            21,
+            22
+          ],
+          [
+            92,
+            93
+          ],
+          [
+            91
+          ]
+        ],
+        "7": [
+          [],
+          [],
+          []
+        ]
+      }
+    },
+    "46792ccc7e840bf6d245210260524ce62c2af9e8": {
+      "GalacticGorillas": {
+        "28": [
+          [
+            21,
+            22,
+            23,
+            24
+          ],
+          [
+            92,
+            95
+          ],
+          [
+            91,
+            93,
+            94
+          ]
+        ],
+        "7": [
+          [],
+          [],
+          []
+        ]
+      }
+    },
+    "4a824323c5cb0f72fb4d758fc2f982aa1fddb79c": {},
+    "564a09f4c3c1b02ca1325597bf6b7b3fbdaec025": {
+      "GalacticGorillas": {
+        "28": [
+          [
+            21,
+            22,
+            23,
+            24,
+            25
+          ],
+          [
+            92,
+            96
+          ],
+          [
+            91,
+            93,
+            94,
+            95
+          ]
+        ],
+        "7": [
+          [],
+          [],
+          []
+        ]
+      }
+    },
+    "75e8314d70ce521f8d45d7401d7496cee2ada986": {
+      "ShibaToken": {
+        "2": [
+          [
+            2
+          ],
+          [],
+          []
+        ],
+        "28": [
+          [],
+          [],
+          []
+        ]
+      }
+    },
+    "87c81218a5e1f483eb8e3bf76924fbe95d054e00": {
+      "GalacticGorillas": {
+        "0": [
+          [],
+          [],
+          []
+        ],
+        "28": [
+          [
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29
+          ],
+          [
+            92
+          ],
+          [
+            91,
+            93,
+            94,
+            95,
+            96
+          ]
+        ],
+        "7": [
+          [
+            64,
+            74,
+            79,
+            80,
+            81
+          ],
+          [],
+          [
+            114
+          ]
+        ]
+      }
+    },
+    "987e959f3949e2559508fccfa8e5b39345085e6a": {
+      "Escrow": {
+        "0": [
+          [],
+          [],
+          []
+        ],
+        "23": [
+          [
+            1,
+            2
+          ],
+          [
+            18
+          ],
+          [
+            17
+          ]
+        ]
+      },
+      "EscrowNFT": {
+        "58": [
+          [
+            35,
+            36
+          ],
+          [],
+          []
+        ],
+        "7": [
+          [
+            20,
+            21
+          ],
+          [],
+          []
+        ]
+      }
+    },
+    "9a90a43af3afe1f61cb8b732eb1e9cf16c581fc3": {},
+    "9df463222f794da11b9a021373b967defa1a602b": {},
+    "a35f657229f3293494e603aeba8c4f48e7ccdf9c": {
+      "RainbowAllianceToken": {
+        "5": [
+          [
+            14
+          ],
+          [],
+          []
+        ]
+      }
+    },
+    "a86045e80a7b4b2df083564da5f1b6acc330608a": {
+      "RedHawksVIP": {
+        "52": [
+          [
+            23,
+            51
+          ],
+          [
+            95
+          ],
+          []
+        ],
+        "7": [
+          [],
+          [],
+          []
+        ]
+      }
+    },
+    "aee2ff2631c523fbd278f833f4caac9ac32d3246": {
+      "GalacticGorillas": {
+        "0": [
+          [
+            44
+          ],
+          [
+            116
+          ],
+          []
+        ],
+        "13": [
+          [],
+          [],
+          []
+        ],
+        "28": [
+          [],
+          [],
+          []
+        ],
+        "7": [
+          [],
+          [],
+          []
+        ]
+      }
+    },
+    "b145f0889c585fcccd15d09fa074632c59dfb42b": {
+      "Auction": {
+        "25": [
+          [
+            0,
+            1
+          ],
+          [
+            5
+          ],
+          [
+            4
+          ]
+        ]
+      },
+      "AuctionAttacker": {
+        "10": [
+          [],
+          [],
+          []
+        ]
+      }
+    },
+    "bdb273db438b3d867f28209571ddec8bbdbd89db": {
+      "RainbowAllianceToken": {
+        "5": [
+          [
+            26,
+            27,
+            28
+          ],
+          [
+            63,
+            64
+          ],
+          [
+            62
+          ]
+        ]
+      }
+    },
+    "bdd9bb51d60e00fb00ef22805c37f2ecbe281929": {},
+    "c043d5d8dd5be3193ac0100af3d5d7c7cf01d50f": {
+      "Lendly": {
+        "31": [
+          [
+            3,
+            5,
+            6,
+            7
+          ],
+          [
+            23,
+            24
+          ],
+          []
+        ]
+      }
+    },
+    "c044e77c1a674ef437e6dfc33a4b028a6733e9e4": {
+      "Escrow": {
+        "0": [
+          [],
+          [],
+          []
+        ],
+        "23": [
+          [
+            1
+          ],
+          [
+            17
+          ],
+          []
+        ]
+      },
+      "EscrowNFT": {
+        "58": [
+          [],
+          [],
+          []
+        ],
+        "7": [
+          [
+            20,
+            21
+          ],
+          [],
+          []
+        ]
+      }
+    },
+    "d482e9d5e00d7dbb7ff0d5e39811b589f0822f28": {},
+    "f0a952a146487e65c97c0ca9f4c5c1cecf22598d": {
+      "RestrictedOwner": {
+        "7": [
+          [
+            1
+          ],
+          [
+            5
+          ],
+          []
+        ]
+      }
+    },
+    "f920aae22c1c4298bec97a357a4b1ac2d17b1d87": {
+      "GalacticGorillas": {
+        "28": [
+          [
+            11,
+            12
+          ],
+          [
+            88,
+            89
+          ],
+          [
+            87
+          ]
+        ],
+        "7": [
+          [],
+          [],
+          []
+        ]
+      }
+    }
+  }
+}
