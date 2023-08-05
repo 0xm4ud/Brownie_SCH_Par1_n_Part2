@@ -2,6 +2,7 @@
 Note: few re-Naming conventions were applied here to avoid Brownie infamous NameSpace collision that should be addressed on v2.0.
 ```
 Structure:
+/hardhat - holds console.sol
 /tests - Contain test files used to test n hack contracts
 /script - Contains Helper scripts used by the test files 
 /interfaces - Contains the interfaces used by the Contracts
